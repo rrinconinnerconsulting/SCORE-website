@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Nav from "../components/Nav.astro";
-import Main from "../components/Main.astro";
-import Footer from "../components/Footer.astro"
+import Main from "../components/Contact-main.astro";
 import Chat from "../components/Help-manamengt.astro"
+import Footer from "../components/Footer.astro"
 import '@fontsource/poppins';
 ---
 
@@ -14,10 +14,9 @@ import '@fontsource/poppins';
 				font-family: 'Poppins', sans-serif;	
 		}
 	</style>
-	
 	<main class="bg-white">
-		<Nav/>
 		<Chat/>
+		<Nav/>
 		<Main/>
 		<Footer/>
 	</main>

@@ -1,0 +1,79 @@
+---
+
+---
+
+<div class="flex gap-5">
+
+  <style>
+      #button-modal{
+          z-index: 0;
+      }
+
+      #ver-modal{
+          z-index: 40;
+      }
+
+      #modal-content{
+          z-index: 50;
+      }
+  </style>
+
+  <div>
+      <div x-data="{ showModal: false, email: '' }" >
+        <!-- Button to open the modal -->
+        <button @click="showModal = true;" id="button-modal" class="px-5 py-2 bg-sblue-general text-swhite-color rounded-3xl  font-bold text-sm hover:bg-sblue-dark outline outline-2 hover:text-swhite-color focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100">Solicitar Demostración</button>
+        <!-- Background overlay -->
+        <div id="ver-modal" x-show="showModal" class="fixed inset-0 transition-opacity" aria-hidden="true" @click="showModal = false ">
+          <div class="absolute inset-0 bg-gray-500 opacity-75 "></div>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal-content" x-show="showModal" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="fixed inset-0 overflow-y-auto " x-cloak>
+          <div>
+            <!-- Modal panel -->
+            <div class="max-w-3xl justify-items-center content-center items-center mx-auto self-center z-50" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+              <div class="bg-white mt-7 pr-5 rounded-2xl ">
+                <!-- Modal content -->
+                <div class="sm:flex items-center">
+                  <!-- Modal img -->
+                  <style>
+                      .clip-path{
+                          clip-path: polygon(0 0, 93% 0, 73% 100%, 0% 100%);
+                      }
+                  </style>
+                  <div>
+                      <div>
+                          <img  src="/src/assets/img/modal-img.png" alt="score-modal">
+                      </div>
+                  </div>
+                  
+                  <div class="w-full mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left flex flex-col gap-3 justify-center">
+                    <h3 class="text-center text-lg text-text-color" id="modal-headline"> ¿Te gustaría una demostración de nuestra plataforma de gestión SCORE? </h3>
+                    <div class="flex flex-col gap-2">
+                      <p class="text-center text-xs text-text-color "> conoce todas nuestras soluciones orientadas a 
+                          diferentes sectores de la industria y sus funcionalidades. Comprueba lo fácil que es integrar SCORE a tus procesos, tareas e impulsos empresariales y de mercado </p>
+                      <!-- Email input -->
+                      <input type="email" x-model="email" class=" p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:border-blue-500" placeholder="correo electrónico">
+                      <div class="flex justify-between">
+                          <label for="default-checkbox" class="text-xs text-text-color dark:text-gray-300">Quiero recibir comunicaciones y actualizaciones de SCORE </label>
+                          <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-sblue-general bg-gray-100 border-gray-300 rounded focus:ring-sblue-general dark:focus:sblue-general dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                      </div>
+                  </div>
+                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse gap-3">
+                      <!-- Subscribe button -->
+                      <button @click="subscribeToNewsletter" type="button" class="px-5 py-2 bg-[#1D70B6] rounded-3xl  font-bold text-white text-sm hover:bg-[#263261]"> Recibir información </button>
+                      <!-- Cancel button -->
+                      <button @click="showModal = false" type="button" class="px-5 py-2 bg-swhite-color text-sblue-general rounded-3xl  font-bold text-sm hover:bg-sblue-general outline outline-2 hover:text-swhite-color focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100"> Regresar </button>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>

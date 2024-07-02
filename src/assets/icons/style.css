@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?weacfh');
+  src:  url('fonts/icomoon.eot?weacfh#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?weacfh') format('truetype'),
+    url('fonts/icomoon.woff?weacfh') format('woff'),
+    url('fonts/icomoon.svg?weacfh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info_icon:before {
+  content: "\e90d";
+}
+.icon-scan_icon:before {
+  content: "\e90e";
+}
+.icon-lente_icon:before {
+  content: "\e90f";
+}
+.icon-facial_icon:before {
+  content: "\e910";
+}
+.icon-informe_icon:before {
+  content: "\e911";
+}
+.icon-graphic_icon:before {
+  content: "\e912";
+}
+.icon-alert_icon:before {
+  content: "\e913";
+}
+.icon-getway:before {
+  content: "\e914";
+}
+.icon-soporte:before {
+  content: "\e915";
+}
+.icon-soporte_mail:before {
+  content: "\e916";
+}
+.icon-row:before {
+  content: "\e917";
+}
+.icon-icono-de-preguntas-frecuentes:before {
+  content: "\e918";
+}
+.icon-copyright:before {
+  content: "\e900";
+}
+.icon-mail:before {
+  content: "\e901";
+}
+.icon-phone:before {
+  content: "\e902";
+}
+.icon-ubication:before {
+  content: "\e903";
+}
+.icon-manitence:before {
+  content: "\e904";
+}
+.icon-dashboard:before {
+  content: "\e905";
+}
+.icon-enbemed-dashboard:before {
+  content: "\e906";
+}
+.icon-enlaced:before {
+  content: "\e907";
+}
+.icon-graphic-3d:before {
+  content: "\e908";
+}
+.icon-graphics:before {
+  content: "\e909";
+}
+.icon-IA-asistend:before {
+  content: "\e90a";
+}
+.icon-modular:before {
+  content: "\e90b";
+}
+.icon-real-time:before {
+  content: "\e90c";
+}

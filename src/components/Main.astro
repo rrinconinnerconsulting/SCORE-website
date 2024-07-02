@@ -1,0 +1,252 @@
+---
+
+import '@fontsource/poppins';
+import Modal from '../components/Modal.astro'
+import Slider from '../components/Slider.astro'
+import CardSlider from './CardSlider.astro';
+
+
+function disableRelativeClasses() {
+        // Obtener todos los elementos con la clase 'relative'
+        const relativeElements = document.querySelectorAll('.relative');
+        // Iterar sobre los elementos y eliminar la clase 'relative'
+        relativeElements.forEach(function(element) {
+          element.classList.remove('relative');  // Eliminar la clase 'relative'
+        });
+}
+
+---
+
+<link rel="stylesheet" href="/src/assets/icons/style.css">
+
+<!-- Banner principal -->
+
+<main class="pt-20 flex items-center gap-9 ">
+    <div class="pl-14 flex flex-col gap-9 " >
+    <h1 class="text-2xl font-extrabold text-[#606060]">
+        Datos en <strong class="text-[#1D70B6] font-extrabold">tiempo real</strong> para tomar<br> <strong class="text-2xl text-[#1D70B6] font-extrabold">decisiones inteligentes</strong>
+    </h1>
+    <p class="text-base text-[#606060] ">
+        SCORE te proporciona información precisa sobre 
+        el entorno para optimizar tus operaciones, 
+
+        Te brindamos un portafolio de servicios completo y 
+        dinámico que se adapta a tus necesidades
+
+        <Modal></Modal>
+    </p>
+    
+    </div>
+    <div>
+        <img src="src/assets/img/render-score.png" alt="score-banner">  
+    </div> 
+    
+</main>
+
+<body>
+
+    <!-- Sección de procesos y gestión -->
+
+    <div>
+
+            <h1 class="text-2xl font-extrabold text-[#606060] text-center pt-[40px] ">
+                SCORE facilita <strong class="text-[#1D70B6] font-extrabold">procesos</strong> y la <strong class="text-2xl text-[#1D70B6] font-extrabold">gestión de datos</strong>
+            </h1>
+
+            <div class="grid grid-cols-3 gap-3 p-[20px] items-center justify-center justify-items-center content-center">
+
+                <!-- Gestión de procesos en tiempo real -->
+
+                <div class="max-w-80 shadow-2xl p-[25px] mb-4 mt-7 rounded-3xl border-b-4 border-[#1D70B6]">
+                    <div class="flex gap-9">
+                        <span class="icon-dashboard text-5xl  text-[#1D70B6]" ></span>
+                        <h2 class="font-bold text-center text-[#606060] text-base">Gestión de procesos en tiempo real</h2>
+                    </div>
+
+                    <p class="text-center pt-8 text-xs text-[#606060] ">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+
+                </div>
+
+                <!-- Fácil visualización en formato gráfico -->
+
+                <div class="max-w-80 shadow-2xl p-[25px] mb-4 mt-7 rounded-3xl border-b-4 border-[#1D70B6]">
+                    <div class="flex gap-9">
+                        <span class="icon-graphics text-5xl  text-[#1D70B6]" ></span>
+                        <h2 class="font-bold text-center text-[#606060]">Fácil visualización en formato gráfico</h2>
+                    </div>
+
+                    <p class="text-center pt-8 text-[#606060] text-xs">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+
+                </div>
+
+                <!-- Dashboard modular y adaptativo -->
+
+                <div class="max-w-80 shadow-2xl p-[25px] mb-4 mt-7 rounded-3xl border-b-4 border-[#1D70B6]">
+                    <div class="flex gap-9">
+                        <span class="icon-modular text-5xl  text-[#1D70B6]" ></span>
+                        <h2 class="font-bold text-center text-[#606060] ">Dashboard modular y adaptativo</h2>
+                    </div>
+
+                    <p class="text-center pt-8 text-[#606060] text-xs">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+
+                </div>
+
+                <!-- Gestionar multiplicación desde una misma plataforma -->
+
+                <div class="max-w-80 shadow-2xl p-[25px] mb-4 mt-7 rounded-3xl border-b-4 border-[#1D70B6]">
+                    <div class="flex gap-9">
+                        <span class="icon-enbemed-dashboard text-5xl  text-[#1D70B6]" ></span>
+                        <h2 class="font-bold text-center text-[#606060] ">Multiplicación en una sola plataforma</h2>
+                    </div>
+
+                    <p class="text-center pt-8 text-[#606060] text-xs">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+
+                </div>
+
+                <!-- Apoyo en tareas complejas asistido con IA -->
+
+                <div class="max-w-80 shadow-2xl p-[25px] mb-4 mt-7 rounded-3xl border-b-4 border-[#1D70B6]">
+                    <div class="flex gap-9">
+                        <span class="icon-IA-asistend text-5xl  text-sky-700" ></span>
+                        <h2 class="font-bold text-center text-[#606060] ">Apoyo en tareas complejas asistido con IA</h2>
+                    </div>
+
+                    <p class="text-center pt-8 text-neutral-500 text-xs">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+
+                </div>
+
+                <div class="max-w-80 shadow-2xl p-[25px] mb-4 mt-7 rounded-3xl border-b-4 border-[#1D70B6]">
+                    <div class="flex gap-9">
+                        <span class="icon-IA-asistend text-5xl  text-sky-700" ></span>
+                        <h2 class="font-bold text-center text-[#606060] ">Apoyo en tareas complejas asistido con IA</h2>
+                    </div>
+
+                    <p class="text-center pt-8 text-neutral-500 text-xs">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+
+                </div>
+
+            </div>
+    
+    </div>
+
+    <!-- slider imagenes -->
+
+   <Slider></Slider>
+
+    <!-- dashboard -->
+
+    <div class="flex flex-col justify-center justify-items-center content-center text-center pt-[60px]">
+
+        <h3 class="text-2xl font-extrabold text-neutral-500">Gestión de información en <strong class="text-sky-700 font-extrabold">tiempo real</strong> gestionados desde nuestra <strong class="text-sky-700 font-extrabold">herramienta Dashboard</strong> </h3>
+
+        <div class="flex p-[50px] items-center justify-center justify-items-center content-center">
+
+            <div class="text-xs  text-[#606060]">
+
+                <p class="pb-[40px] font-semibold text-sm">proporciona información clara y dinámica presentado datos desde elementos gráficos interactivos, tablas, barras, etc. </p>
+
+                <div class="grid grid-cols-2 gap-[20px]">
+                    <div class="flex gap-[10px] max-w-xs items-center">
+                        <span class="icon-real-time text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    </div>
+
+                    <div class="flex gap-[10px] max-w-xs items-center ">
+                        <span class="icon-manitence text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    </div>
+
+                    <div class="flex gap-[10px] max-w-xs items-center">
+                        <span class="icon-enlaced text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    </div>
+
+                    <div class="flex gap-[10px] max-w-xs items-center">
+                        <span class="icon-graphic-3d text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    </div>
+
+
+                </div>
+
+                <p class="pb-[40px] font-semibold pt-[40px] text-sm">proporciona información clara y dinámica presentado datos desde elementos gráficos interactivos, tablas, barras, etc. </p>
+
+                <div class="grid grid-cols-2 gap-[30px]">
+                    <div class="flex gap-[10px] max-w-xs items-center">
+                        <span class="icon-real-time text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <p class="text-left"> Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    </div>
+
+                    <div class="flex gap-[10px] max-w-xs items-center ">
+                        <span class="icon-manitence text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    </div>
+
+                    <div class="flex gap-[10px] max-w-xs items-center">
+                        <span class="icon-enlaced text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    </div>
+
+                    <div class="flex gap-[10px] max-w-xs items-center">
+                        <span class="icon-graphic-3d text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div>
+                <img src="/src/assets/img/CTA-2.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- servicios en la industria -->
+
+    <div class="flex items-center z-30"> 
+        <div class="max-w-lg flex flex-col gap-[30px] pl-[60px] items-center justify-center justify-items-center content-center">
+            <h2 class="text-2xl font-extrabold text-[#606060] text-center">
+                Áreas <strong class="text-sky-700 font-extrabold">estratégicas</strong> <br> en la industria
+            </h2>
+            <p class="text-xs  text-[#606060] text-center">
+                Accede a datos actualizados al instante. Observa<br> tendencias, patrones y cambios en tiempo real para tomar <br> decisiones informadas
+            </p>
+            <Modal></Modal>
+        </div>
+
+       <div>
+            <img class="absolute right-0 w-[500px] mr-[100px] " src="/src/assets/img/background-section.png ">
+
+            <div class="relative right-0">
+                <div class=" relative bg-gradient-to-r from-[#1D70B6] to-[#0095DA] w-[270px] p-[10px] rounded-2xl top-[200px] left-[200px] shadow-2xl ">
+                    <img src="/src/assets/img/apss.png">
+                </div>
+            
+                <div class=" relative w-[300px] top-[-170px] left-[480px] bg-white p-[30px] rounded-3xl shadow-2xl">
+                    <div class="flex">
+                        <h2 class="font-bold text-center text-[#606060]">Fácil visualización en formato gráfico</h2>
+                        <span class="icon-real-time text-4xl bg-[#1D70B6] p-[8px] rounded-full text-white"></span>
+                    </div>
+
+                    <p class="text-xs  text-[#606060] ">
+                        Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas
+                    </p>
+                </div>
+
+                <div class=" relative w-[300px] top-[-100px] left-[500px] bg-white p-[30px] rounded-3xl shadow-2xl">
+                    <div class="flex">
+                        <h2 class="font-bold text-center text-[#606060]">Fácil visualización en formato gráfico</h2>
+                        <span class="icon-real-time text-4xl bg-[#1D70B6] p-[8px] rounded-full text-white"></span>
+                    </div>
+
+                    <p class="text-xs  text-[#606060] ">
+                        Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas
+                    </p>
+                </div>  
+            </div>
+        </div>
+    </div>
+    
+</body>

@@ -1,0 +1,158 @@
+---
+
+import '@fontsource/poppins';
+
+---
+
+<link rel="stylesheet" href="/src/assets/icons/style.css">
+
+<style>
+    main{
+            font-family: 'Poppins', sans-serif;	
+    };
+
+    body{
+            font-family: 'Poppins', sans-serif;	
+    };
+    
+</style>
+
+<!-- Banner principal -->
+
+<main class="pt-20 flex items-center gap-9 justify-between">
+
+    
+    <div class="pl-14 flex flex-col gap-9 " >
+    <img class="w-[200px]" src="src/assets/img/SPAD Line-logo.svg">
+    <h1 class="text-2xl font-extrabold text-[#606060]">
+        Reconocer características<br> <strong class="text-[#1D70B6] font-extrabold"> faciales y gestos</strong> 
+    </h1>
+    <p class="text-base text-[#606060] max-w-3xl ">
+        Revoluciona el marketing y la experiencia del cliente. Esta nueva tecnología permite reconocer características faciales, analizar expresiones, identificar emociones y obtener información sobre preferencias y gustos.
+    </p>
+    <button class="px-5 py-2 bg-[#1D70B6] rounded-3xl  font-bold text-white text-sm max-w-80 hover:bg-[#263261]">solicitar demostración</button>
+    </div>
+    <div class="right-0">
+        <img class="w-[600px]" src="src/assets/img/slider 1 - line.png" alt="score-banner">
+    </div> 
+    
+</main>
+
+
+
+<body>
+    
+        <!-- component -->
+<div class=" flex flex-col justify-between  bg-gradient-to-r from-sblue-general via-sblue-medium to-sblue-dark shadow-inner shadow-[0px 4px 20.3px 0px rgba(0, 0, 0, 0.25)] w-full pt-5">
+    
+    <div class="w-full flex flex-col gap-6 justify-center text-center mb-9 ">
+        <h3 class="text-2xl text-white"><strong>Herramientas</strong> adaptadas al <strong> monitoreo continuo</strong></h3>
+        <p class="text-sm text-white">Nuestra herramienta de equipos en campo te respalda en la <br> prevención de desastres naturales</p>
+    </div>
+    <div x-data="{ openTab: 1 }">
+        <div class="w mx-auto flex gap-20">
+            <div x-show="openTab === 1" class="transition-all duration-300">
+                <div class="h-[350px]">
+                    <div class="flex gap-10">
+                        <img class="h-[350px]" src="/src/assets/img/montaje_spad-lineT1.png" alt="">
+                        <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
+                            <p>Nuestros equipos de alta tecnología, recopilan datos en todo momento sobre condiciones climáticas, dentro de los diferentes equipos están sensores de temperatura, humedad, viento entre otros.</p>
+                            <p>Permiten generar alertas tempranas y análisis ante la inminencia de desastres naturales, además de mapear zonas vulnerables y predecir próximas inclemencias ambientales </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-show="openTab === 2" class="transition-all duration-300">
+                <div class="h-[350px]">
+                    <div class="flex gap-10">
+                        <img class="h-[350px]" src="/src/assets/img/montaje_spad-lineT2.png" alt="">
+                        <div class= "w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
+                            <p>Las alertas desempeñan un papel crucial en al prevención de incidentes ambientales, permite identificar etapas antes de los incidentes en tiempo de alertas tempranas, medias y urgentes.
+
+                                Y proponer medidas preventivas antes posibles riesgos como inundaciones, deslizamientos, precipitaciones altas entre otros,
+                                
+                                permiten movilizar recurso y equipos en una situación de emergencia temprana, minimizando los impactos negativos y facilitando la recuperación</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-show="openTab === 3" class="transition-all duration-300">
+                <div class="h-[350px]">
+                    <div class="flex gap-10">
+                        <img class="h-[350px]" src="/src/assets/img/montaje_spad-lineT3.png" alt="">
+                        <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
+                            <p>Obtener datos de manera inmediata  y  poder verlos por zona, equipos o por fecha es algo que te permite SPAD IoT, ahorrar gastos, datos operativos, tiempos y gente.
+
+                                Al tener los datos agrupados en paneles modulares que se adaptan a las necesidades de medición de datos. Además de acceder a transmisión e instantáneas en vivo, datos del equipo entre otros.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-show="openTab === 4" class="transition-all duration-300">
+                <div class="h-[350px]">
+                    <div class="flex gap-10">
+                        <img class="h-[350px]" src="/src/assets/img/montaje_spad-lineT4.png" alt="">
+                        <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
+                            <p>En nuestra sección de informes, te ofrecemos herramientas como exportar informes a tu gusto integrando elementos específicos, respaldados por datos confiables y actualizados, identificando cuales son los datos claves para exportar informes.
+                                Detallando datos de forma eficiente y precisa accediendo a datos generados en todo momento con insights profundos sobre tus métricas clave y toma decisiones informadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 flex flex-col text-swhite-color gap-6 text-xs font-bold">
+                <button x-on:click="openTab = 1" :class="{ 'bg-swhite-color text-sblue-general': openTab === 1 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3"> <span class="icon-getway text-lg"></span>Equipos de monitoreo ambiental en campo</button>
+                <button x-on:click="openTab = 2" :class="{ 'bg-swhite-color text-sblue-general': openTab === 2 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3"> <span class="icon-alert_icon text-lg"></span> Alertas tempranas, medias y de alto riesgo</button>
+                <button x-on:click="openTab = 3" :class="{ 'bg-swhite-color text-sblue-general': openTab === 3 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3"> <span class="icon-graphic_icon text-sm"></span> Datos en tiempo real gestionados</button>
+                <button x-on:click="openTab = 4" :class="{ 'bg-swhite-color text-sblue-general': openTab === 4 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3"> <span class="icon-informe_icon text-lg"></span> Informes personalizados y adaptativos</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+        
+
+    <!-- gestion de datos en tiempo real -->
+
+    <div class="flex flex-col justify-center justify-items-center content-center text-center">
+
+        
+
+        <div class="flex p-[20px] items-center justify-center justify-items-center content-center gap-[100px]">
+
+                    <div class=" max-w-xs items-center flex flex-col gap-6">
+                        <h3 class="text-2xl font-extrabold text-neutral-500">Gestión de datos <br> en <strong class="text-sky-700 font-extrabold">tiempo real</strong> </h3>
+                        <p class="text-center text-xs text-neutral-500">Nuestros sensores inteligentes están alimentando nuestras bases de datos que permiten generar alertas, proporcionar gráficos precisos</p>
+                        <button class="px-5 py-2 bg-[#1D70B6] rounded-3xl  font-bold text-white text-sm w-[300px] hover:bg-[#263261]">solicitar demostración</button>
+                    </div>
+
+                    <div >
+                        <img class="w-[400px]" src="/src/assets/img/montaje_spad-Iine-extd.png" alt="">
+                    </div>
+
+        </div>
+    </div>
+
+    <!-- nuetsro asociados -->
+
+    <div>
+        <div class="pl-[60px] pr-[60px] flex justify-between">
+            <h3 class="text-2xl font-extrabold text-neutral-500 w-[300px]">Nuestros <strong class="text-sky-700 font-extrabold"> asociados </strong> </h3>
+            <p class="text-right text-xs text-neutral-500 w-[300px]" >Nuestra herramienta es usada por entidades ambientales y de estado para el monitoreo y gestión de posibles riesgos climaticos</p>
+        </div>
+
+        <div class="flex p-[60px] justify-center justify-items-center content-center items-center gap-6">
+            <img src="/src/assets/img/logo 194.png" alt="">
+            <img src="/src/assets/img/logo 195.png" alt="">
+            <img src="/src/assets/img/logo 196.png" alt="">
+            <img src="/src/assets/img/logo 197.png" alt="">
+            <img src="/src/assets/img/logo 198.png" alt="">
+        </div>
+    </div>
+    
+</body>

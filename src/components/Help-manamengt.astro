@@ -1,0 +1,61 @@
+---
+---
+
+<header>
+    <script>
+        const button = document.querySelector('#help-button') as Element;
+        const menuOpen = document.querySelector('#help-open') as Element;
+        const closeOpen = document.querySelector('#close-open') as Element;
+    
+        button.addEventListener("click", () => {
+            menuOpen.classList.toggle("hidden");
+        });
+
+        closeOpen.addEventListener("click", () => {
+            menuOpen.classList.toggle("hidden");
+        });
+
+
+    </script>
+</header>
+
+<div class="fixed bottom-[50px] right-[50px] flex items-end gap-6 z-40">
+
+    <div id="help-open" class="hidden">
+
+    <div class="bg-gradient-to-r from-[#1D70B6] to-blue-500 pl-8 pr-8 relative w-[365px] rounded-t-lg">
+        <div class="relative"></div>
+        <div class="p-5 flex justify-between items-center">
+            <img src="/src/assets/img/score-logo-white.svg" alt="logo-score">
+            <span id="close-open" class="icon-row text-sm text-white cursor-pointer"></span>
+        </div>
+        <div>
+            <h1 class=" text-sm text-white pb-3 "><strong>Bienvenido a SCORE </strong><br>
+                Estamos aquí para resolver tus dudas</h1>
+            <div class=" bg-white p-5 flex flex-col gap-3 h-[200px] overflow-hidden overflow-y-scroll  scrollbar-thumb-blue-500 scrollbar-thin rounded-t-lg">
+                <h3 class="text-xs font-bold">Dudas frecuentes</h3>
+                <div class="text-xs w-[250px] flex flex-col gap-3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia.</p>       
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia.</p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class=" bg-white h-[60px] rounded-b-lg">
+
+    </div>
+    </div>
+
+    <div id="help-button">
+        <img  class="p-2 bg-[#0E5AA6] rounded-full hover:drop-shadow-2xl hover:bg-[#35A7DF] cursor-help w-[70px]" src="/src/assets/img/score-sym.svg">
+    </div>
+</div>
+
+
+
