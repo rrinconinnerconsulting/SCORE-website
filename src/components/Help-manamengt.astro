@@ -19,9 +19,20 @@
     </script>
 </header>
 
-<div class="fixed bottom-[50px] right-[50px] flex items-end gap-6 z-40">
+    <style>
+        @media screen and (max-width:572px){
+            #order-flex{
+                flex-direction:column;
+                bottom: 5px;
+                right: 5px;
+                gap: 1rem;
+            }
+        }
+    </style>
 
-    <div id="help-open" class="hidden">
+<div id="order-flex" class="fixed bottom-[50px] right-[50px] flex items-end gap-6 z-40">
+
+    <div id="help-open" class="hidden shadow-lg shadow-white">
 
     <div class="bg-gradient-to-r from-[#1D70B6] to-blue-500 pl-8 pr-8 relative w-[365px] rounded-t-lg">
         <div class="relative"></div>

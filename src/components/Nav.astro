@@ -1,5 +1,6 @@
 ---
 import '@fontsource/poppins';
+import MenuDespligable from './MenuDespligable.astro';
 ---
 
 <header class="fixed w-full z-30">
@@ -25,16 +26,34 @@ import '@fontsource/poppins';
         @media screen and (min-width:970px){
     #block-responsive-button{
         display: none;
+    
     }
+        }
+
+        @media screen and (max-width:500px){
+            #li-container{
+                gap: 1rem;
+            }
+
+        }
+
+        @media screen and (max-width:400px){
+            #text-button{
+                font-size: 10px;
+            }
+
+            #logo-scorenav{
+                width: 6rem
+            }
         }
     </style>
 
-    <nav id="nav-responsive" class="flex justify-between items-center px-20 py-6 bg-white" >
-        <div class="flex justify-center items-center gap-14">
+    <nav id="nav-responsive" class="flex justify-between items-center px-20 py-6 bg-white w-full" >
+        <div id="li-container" class="flex justify-center items-center gap-14">
             <img id="block-responsive-button" class="w-6 cursor-pointer" src="/src/assets/img/menu-svgrepo-com.svg" alt="menu-svgrepo-com.svg">
-            <a href="/"><img src="/src/assets/img/logo-score.svg" alt="Logo Score"></a>
-            <a id="menu-button" class="text-sm list-none cursor-pointer">soluciones</a>
-            <a id='responsive-element' href="/contact" class="text-sm list-none">contacto</a>
+            <a href="/"><img id="logo-scorenav" src="/src/assets/img/logo-score.svg" alt="Logo Score"></a>
+            <a id="menu-button" class="text-sm list-none cursor-pointer hover:text-sblue-general active:font-bold" aria-current="page">soluciones</a>
+            <a id='responsive-element' href="/contact" class="text-sm list-none  hover:text-sblue-general active:font-bold cursor-pointer">contacto</a>
         </div>
     
         <div class="flex gap-5">
@@ -103,8 +122,8 @@ import '@fontsource/poppins';
     
     </nav>
 
-    <div  class=" flex  ">
-        <img src="/src/assets/img/background-border-nav.png" class="w-full" alt="border img">
+    <div  class=" flex w-full">
+        <img src="/src/assets/img/background-border-nav.png" alt="border img">
     </div>
 
     <div id="menu-open" class="p-10 mt-[-70px] bg-white w-full hidden">
@@ -210,116 +229,7 @@ import '@fontsource/poppins';
 
     <div id="block-responsive-open" class="hidden">
 
-        <div class="fixed bg-swhite-color">
-
-                <div class="flex flex-col gap-6">
-
-                    <button id='responsive-element' class="px-5 py-2 bg-[#1D70B6] rounded-3xl  font-bold text-white text-xs hover:bg-[#263261]">iniciar sesión SCORE</button>
-
-                    <a id="menu-responsive-button" class="text-sm list-none cursor-pointer">soluciones</a>
-
-                    <div id="menu-responsive-open" class="hidden">
-
-                    <div class="flex flex-col gap-5">
-
-                        <!-- spad IoT -->
-
-                        <div class="flex justify-between gap-5 text-xs">
-                            <a class="flex items-center gap-4" href="/Spad_IoT">
-                                <img src="/src/assets/img/icon_spadiot.svg" alt="SPAD iot icono">
-                                <p><strong class="text-[#1D70B6]">SPAD IoT</strong> <br>  Gestión del riesgo ambiental</p>
-                            </a>
-                            <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px]  justify-center rounded-lg">
-                                <img class="h-[18px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-
-                            </div>
-                        </div>
-
-                        <!-- spad line -->
-                        
-                        <div class="flex justify-between gap-5 text-xs ">
-                            <a class="flex items-center gap-4" href="/Spad_Line">
-                                <img src="/src/assets/img/icon_spaline.svg" alt="SPAD line icono">
-                                <p><strong class="text-[#1D70B6]">SPAD Line</strong> <br>  Reconocimiento facial y de gestos</p>
-                            </a>
-                            <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] justify-center rounded-lg">
-                                <img class="h-[18px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-
-                            </div>
-                        </div>
-
-                        <!-- spad Farm -->
-                        
-                        <div class="flex justify-between gap-5 text-xs">
-                            <a class="flex items-center gap-4">
-                                <img src="/src/assets/img/icon_spadfarm.svg" alt="SPAD farm icono">
-                                <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Farm</strong> <br> Tecnología enfocado al Agro  </p>
-                            </a>
-                            <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] justify-center rounded-lg">
-                                <img class="h-[18px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-
-                            </div>
-                        </div>
-
-                        <!-- spad Struccture -->
-                        
-                        <div class="flex justify-between gap-5 text-xs">
-                            <a class="flex items-center gap-4">
-                                <img src="/src/assets/img/icon_spadstruccture.svg" alt="SPAD Struccture icono">
-                                <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Struccture</strong> <br> Servicios en la nube</p>
-                            </a>
-                            <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] justify-center rounded-lg">
-                                <img class="h-[18px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-
-                            </div>
-                        </div>
-
-                        <!-- spad home -->
-                        
-                        <div class="flex justify-between gap-5 text-xs">
-                            <a class="flex items-center gap-4">
-                                <img src="/src/assets/img/icon_spadhome.svg" alt="SPAD home icono">
-                                <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Home</strong> <br>  Asistencia en el hogar</p>
-                            </a>
-                            <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] justify-center rounded-lg">
-                                <img class="h-[18px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-
-                            </div>
-                        </div>
-
-                        <!-- spad Retail -->
-                        
-                        <div class="flex justify-between gap-5 text-xs">
-                            <a class="flex items-center gap-4">
-                                <img src="/src/assets/img/icon_spadretail.svg" alt="SPAD Retail icono">
-                                <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75" ><strong>SPAD Retail</strong>  <br>  Supervición de procesos</p>
-                            </a>
-                            <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] justify-center rounded-lg">
-                                <img class="h-[18px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-
-                            </div>
-                        </div>
-
-                        <!-- spad Mall -->
-                        
-                        <div class="flex justify-between gap-5 text-xs">
-                            <a class="flex items-center gap-4">
-                                <img src="/src/assets/img/icon_spadmall.svg" alt="SPAD Mall icono">
-                                <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong >SPAD Mall</strong> <br>  Asistencia comercial</p>
-                            </a>
-                            <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px]  justify-center rounded-lg">
-                                <img class="h-[18px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <a id='responsive-element' href="/contact" class="text-sm list-none">contacto</a>
-            </div>
-            
-        </div>
+        <MenuDespligable></MenuDespligable>
 
     </div>
 
@@ -332,14 +242,7 @@ import '@fontsource/poppins';
         });
     </script>
 
-<script>
-    const buttonres = document.querySelector('#menu-responsive-button') as Element;
-    const menuOpenres = document.querySelector('#menu-responsive-open') as Element;
 
-    buttonres.addEventListener("click", () => {
-        menuOpenres.classList.toggle("hidden");
-    });
-</script>
 
 <script>
     const blockbuttonres = document.querySelector('#block-responsive-button') as Element;

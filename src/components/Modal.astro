@@ -5,6 +5,12 @@
 <div class="flex gap-5">
 
   <style>
+
+@media screen and (max-width:1160px) {
+        .tabs-icon{
+            gap: 3rem;
+        }
+    }
       #button-modal{
           z-index: 0;
       }
@@ -16,6 +22,40 @@
       #modal-content{
           z-index: 50;
       }
+
+      @media screen and (max-width:800px) {
+
+        h1{
+            font-size: 18px;
+        }
+
+        strong{
+            font-size: 18px;
+        }
+
+        p{
+          font-size: 12px;
+        }
+
+        #modal-content{
+          width: 380px;
+        }
+
+        #img-modal{
+          display: none;
+        }
+
+        button{
+          font-size: 12px;
+        }
+      }
+
+      @media screen and (max-width:500px){
+        #button-modal{
+          font-size: 12px;
+        }
+      }
+
   </style>
 
   <div>
@@ -31,7 +71,7 @@
         <div id="modal-content" x-show="showModal" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="fixed inset-0 overflow-y-auto " x-cloak>
           <div>
             <!-- Modal panel -->
-            <div class="max-w-3xl justify-items-center content-center items-center mx-auto self-center z-50" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="max-w-3xl justify-items-center content-center items-center mx-auto self-center" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
               <div class="bg-white mt-7 pr-5 rounded-2xl ">
                 <!-- Modal content -->
                 <div class="sm:flex items-center">
@@ -42,7 +82,7 @@
                       }
                   </style>
                   <div>
-                      <div>
+                      <div id="img-modal">
                           <img  src="/src/assets/img/modal-img.png" alt="score-modal">
                       </div>
                   </div>

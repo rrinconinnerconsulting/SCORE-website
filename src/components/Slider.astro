@@ -1,9 +1,44 @@
 
 <!-- slider imagenes -->
 
-<div class=" flex pl-[50px] bg-gradient-to-r from-[#1D70B6] to-[#0095DA] shadow-inner shadow-[0px 4px 20.3px 0px rgba(0, 0, 0, 0.25)] w-full gap-[200px] items-center pt-[80px]">
+<style>
+        @media screen and (max-width:970px){
+            #potafolio-container{
+                gap: 50px;
+            }
 
-    <div class="flex flex-col gap-3 mt-[-100px] w-[300px]">
+            h1{
+        font-size: 18px;
+    }
+
+    strong{
+        font-size: 18px;
+    }
+
+    p{
+      font-size: 12px;
+    }
+        }
+
+        @media screen and (max-width:500px){
+        #potafolio-container{
+                flex-direction: column;
+                padding-left: 0px;
+        }
+
+        #slider-container{
+            width: 300px;
+        }
+
+        #text-slider{
+            margin-top: -50px;
+        }
+    }
+</style>
+
+<div id="potafolio-container" class=" flex pl-[50px] bg-gradient-to-r from-[#1D70B6] to-[#0095DA] shadow-inner shadow-[0px 4px 20.3px 0px rgba(0, 0, 0, 0.25)] w-full gap-[200px] items-center pt-[80px]">
+
+    <div id="text-slider" class="flex flex-col gap-3 mt-[-100px] w-[300px]">
         <h2 class="text-2xl  font-semibold text-[#ffffff] ">Nuestro <strong class="font-extrabold">portafolio</strong><br> de <servicios class="font-extrabold">servicios</strong></h2>
         <p class="text-sm text-[#ffffff]"> Soluciones integrales diseñadas <br>para diferentes líneas de <br>  negocio al alcance de un entorno <br> de gestión practico e intuitivo </p>
     </div>
@@ -41,10 +76,9 @@
     transform: translateX(calc(-270px * 7));
         }
             }
-
     </style>
 
-    <div class="slider">
+    <div id="slider-container" class="slider">
 
         <div class="flex gap-4 slider-track ">
 
@@ -66,7 +100,7 @@
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80" href="/Spad_IoT">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80" href="/Spad_Line">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -88,18 +122,18 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD IoT</h1>
+                                        <p class="text-xs  text-white">Gestión ambiental</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#006633] to-[#94C11F] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
-                                    El reconocimiento facial es una tecnología que se puede implementar, para el  
-                                    análisis, de segmentación,
-                                    emociones, tiempo de atención, ubicación y contexto para métricas enfocado a  publicidad
+                                    Nuestros sensores de alta precisión te mantienen informado sobre las 
+                                    condiciones ambientales, permitiéndote
+                                    actuar rápidamente ante cualquier  anomalía y activar un  plan de acción
                                 </p>
                             </a>
     
@@ -117,14 +151,14 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Home</h1>
                                         <p class="text-xs  text-white">Reconocimiento de gestos</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#D34304] to-[#F7A521] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -146,14 +180,14 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Farm</h1>
+                                        <p class="text-xs  text-white">Tecnología en el campo</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#94C11F] to-[#12772F] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -175,14 +209,14 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Infraestruccture</h1>
+                                        <p class="text-xs  text-white">servicios en la nube</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#1C5D7D] to-[#2DA4DC] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -205,14 +239,14 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Retail</h1>
+                                        <p class="text-xs  text-white">optimizar procesos</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0F2678] to-[#2DA4DC] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -234,14 +268,14 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Mall</h1>
                                         <p class="text-xs  text-white">Reconocimiento de gestos</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#740B49] to-[#E25AAA] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -252,10 +286,12 @@
                         </div>
                     </div>
 
+                    <!--X2 sliders -->
+
                     <!-- card SPAD Line -->
 
                     <div>
-                        <div class="relative w-[270px] overflow-hidden bg-center rounded-2xl">
+                        <div class=" w-[270px] overflow-hidden bg-center rounded-2xl">
                             <img
                             class="rounded-2xl"
                             src="/src/assets/img/spad_line.jpg"
@@ -270,7 +306,7 @@
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80" href="/Spad_IoT">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80" href="/Spad_Line">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -292,24 +328,23 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD IoT</h1>
+                                        <p class="text-xs  text-white">Gestión ambiental</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#006633] to-[#94C11F] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
-                                    El reconocimiento facial es una tecnología que se puede implementar, para el  
-                                    análisis, de segmentación,
-                                    emociones, tiempo de atención, ubicación y contexto para métricas enfocado a  publicidad
+                                    Nuestros sensores de alta precisión te mantienen informado sobre las 
+                                    condiciones ambientales, permitiéndote
+                                    actuar rápidamente ante cualquier  anomalía y activar un  plan de acción
                                 </p>
                             </a>
     
                         </div>
                     </div>
-
 
                     <!-- card SPAD Home -->
 
@@ -322,14 +357,14 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Home</h1>
                                         <p class="text-xs  text-white">Reconocimiento de gestos</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#D34304] to-[#F7A521] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -351,14 +386,14 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Farm</h1>
+                                        <p class="text-xs  text-white">Tecnología en el campo</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#94C11F] to-[#12772F] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -380,14 +415,14 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Infraestruccture</h1>
+                                        <p class="text-xs  text-white">servicios en la nube</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#1C5D7D] to-[#2DA4DC] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -410,14 +445,14 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Retail</h1>
+                                        <p class="text-xs  text-white">optimizar procesos</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0F2678] to-[#2DA4DC] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -439,14 +474,14 @@
     
                             <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
                                     <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Mall</h1>
                                         <p class="text-xs  text-white">Reconocimiento de gestos</p>
                                     </div>
     
                                     <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
                             </div>
                             
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#740B49] to-[#E25AAA] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
                                 <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
                                     El reconocimiento facial es una tecnología que se puede implementar, para el  
                                     análisis, de segmentación,
@@ -458,152 +493,36 @@
                     </div>
 
                     <!-- card SPAD Line -->
+
+                    <div>
+                        <div class=" w-[270px] overflow-hidden bg-center rounded-2xl">
+                            <img
+                            class="rounded-2xl"
+                            src="/src/assets/img/spad_line.jpg"
+                            alt="SPAD LINE"/>
+    
+                            <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
+                                    <div class="text-card">
+                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
+                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
+                                    </div>
+    
+                                    <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
+                            </div>
+                            
+                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80" href="/Spad_Line">
+                                <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
+                                    El reconocimiento facial es una tecnología que se puede implementar, para el  
+                                    análisis, de segmentación,
+                                    emociones, tiempo de atención, ubicación y contexto para métricas enfocado a  publicidad
+                                </p>
+                            </a>
+    
+                        </div>
+                    </div>
                     
-                    <!-- card SPAD Home -->
 
-                    <div>
-                        <div class="relative w-[270px] overflow-hidden bg-center rounded-2xl">
-                            <img
-                            class="rounded-2xl"
-                            src="/src/assets/img/spad_home.jpg"
-                            alt="SPAD LINE"/>
-    
-                            <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
-                                    <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
-                                    </div>
-    
-                                    <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
-                            </div>
-                            
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
-                                <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
-                                    El reconocimiento facial es una tecnología que se puede implementar, para el  
-                                    análisis, de segmentación,
-                                    emociones, tiempo de atención, ubicación y contexto para métricas enfocado a  publicidad
-                                </p>
-                            </a>
-    
-                        </div>
-                    </div>
-
-                    <!-- card SPAD Farm -->
-
-                    <div>
-                        <div class="relative w-[270px] overflow-hidden bg-center rounded-2xl">
-                            <img
-                            class="rounded-2xl"
-                            src="/src/assets/img/spad_farm.jpg"
-                            alt="SPAD LINE"/>
-    
-                            <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
-                                    <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
-                                    </div>
-    
-                                    <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
-                            </div>
-                            
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
-                                <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
-                                    El reconocimiento facial es una tecnología que se puede implementar, para el  
-                                    análisis, de segmentación,
-                                    emociones, tiempo de atención, ubicación y contexto para métricas enfocado a  publicidad
-                                </p>
-                            </a>
-    
-                        </div>
-                    </div>
-
-                    <!-- card SPAD Infraestruccture -->
-
-                    <div>
-                        <div class="relative w-[270px] overflow-hidden bg-center rounded-2xl">
-                            <img
-                            class="rounded-2xl"
-                            src="/src/assets/img/spad_infraestruccture.jpg"
-                            alt="SPAD LINE"/>
-    
-                            <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
-                                    <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
-                                    </div>
-    
-                                    <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
-                            </div>
-                            
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
-                                <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
-                                    El reconocimiento facial es una tecnología que se puede implementar, para el  
-                                    análisis, de segmentación,
-                                    emociones, tiempo de atención, ubicación y contexto para métricas enfocado a  publicidad
-                                </p>
-                            </a>
-    
-                        </div>
-                    </div>
-
-
-                    <!-- card SPAD Retail -->
-
-                    <div>
-                        <div class="relative w-[270px] overflow-hidden bg-center rounded-2xl">
-                            <img
-                            class="rounded-2xl"
-                            src="/src/assets/img/spad_retail.jpg"
-                            alt="SPAD LINE"/>
-    
-                            <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
-                                    <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
-                                    </div>
-    
-                                    <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
-                            </div>
-                            
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
-                                <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
-                                    El reconocimiento facial es una tecnología que se puede implementar, para el  
-                                    análisis, de segmentación,
-                                    emociones, tiempo de atención, ubicación y contexto para métricas enfocado a  publicidad
-                                </p>
-                            </a>
-    
-                        </div>
-                    </div>
-
-                    <!-- card SPAD Mall -->
-
-                    <div>
-                        <div class="relative w-[270px] overflow-hidden bg-center rounded-2xl">
-                            <img
-                            class="rounded-2xl"
-                            src="/src/assets/img/spad_mall.jpg"
-                            alt="SPAD LINE"/>
-    
-                            <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
-                                    <div class="text-card">
-                                        <h1 class=" drop-shadow-lg font-bold text-white" >SPAD Line</h1>
-                                        <p class="text-xs  text-white">Reconocimiento de gestos</p>
-                                    </div>
-    
-                                    <img class="w-[65px]" src="/src/assets/img/spad Line logo.svg">
-                            </div>
-                            
-                            <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80">
-                                <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">
-                                    El reconocimiento facial es una tecnología que se puede implementar, para el  
-                                    análisis, de segmentación,
-                                    emociones, tiempo de atención, ubicación y contexto para métricas enfocado a  publicidad
-                                </p>
-                            </a>
-    
-                        </div>
-                    </div>
+                   <!--final sliders -->
 
                 </div>
 

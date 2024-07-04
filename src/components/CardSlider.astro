@@ -1,12 +1,73 @@
-<div class="da relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 z-0">
-    <div class="absolute inset-0 bg-center dark:bg-black"></div>
-    <div class="group relative m-0 flex h-72 w-96 rounded-xl shadow-xl ring-gray-900/5 sm:mx-auto sm:max-w-lg">
-      <div class="z-10 h-full w-full overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
-        <img src="https://images.unsplash.com/photo-1506187334569-7596f62cf93f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3149&q=80" class="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110" alt="" />
+---
+import '@fontsource/poppins';
+---
+
+<style>
+  main{
+          font-family: 'Poppins', sans-serif;	
+  };
+
+  body{
+          font-family: 'Poppins', sans-serif;	
+  };
+  
+</style>
+
+<style>
+  .text-card ,.pharagrph-container-shadow{
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); 
+    }
+    
+</style>
+
+
+
+<div>
+  <div class=" w-[270px] overflow-hidden bg-center rounded-2xl">
+      <img
+      class="rounded-2xl"
+      src="/src/assets/img/spad_line.jpg"
+      alt="Spad Line"/>
+
+      <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
+              <div class="text-card">
+                  <h1 class=" drop-shadow-lg font-bold text-white" >Spad Line</h1>
+                  <p class="text-xs  text-white">Reconocimiento de gestos</p>
+              </div>
+
+              <img class="w-[65px]" src="/src/assets/img/SPAD Line logo.svg">
       </div>
-      <div class="absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110">
-        <h1 class="font-serif text-2xl font-bold text-white shadow-xl">Azores</h1>
-        <h1 class="text-sm font-light text-gray-200 shadow-xl">A Little Paradise in Portugal</h1>
-      </div>
-    </div>
+      
+      <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80" href="/Spad_IoT.astro">
+          <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">El reconocimiento facial es una tecnología que se puede implementar, para el  
+            análisis, de segmentación,
+            emociones, tiempo de atención, ubicación y contexto para métricas enfocado a  publicidad</p>
+      </a>
+
   </div>
+</div>
+
+<div>
+  <div class=" w-[270px] overflow-hidden bg-center rounded-2xl">
+      <img
+      class="rounded-2xl"
+      src="/src/assets/img/spad_line.jpg"
+      alt="Spad Line"/>
+
+      <div class="relative top-[-80px] flex justify-between items-center p-[10px]">
+              <div class="text-card">
+                  <h1 class=" drop-shadow-lg font-bold text-white" >Spad Line</h1>
+                  <p class="text-xs  text-white">Reconocimiento de gestos</p>
+              </div>
+
+              <img class="w-[65px]" src="/src/assets/img/SPAD Line logo.svg">
+      </div>
+      
+      <a class=" cursor-pointer absolute bottom-0 left-0 right-0 top-0 w-[270px] h-[243px] rounded-2xl overflow-hidden bg-gradient-to-tl from-[#0D3150] to-[#1D70B6] opacity-0 transition duration-300 ease-in-out hover:opacity-80" href="/Spad_IoT.astro">
+          <p class="pharagrph-container-shadow text-[13px] text-white p-[20px] text-center">El reconocimiento facial es una tecnología que se puede implementar, para el  
+            análisis, de segmentación,
+            emociones, tiempo de atención, ubicación y contexto para métricas enfocado a  publicidad</p>
+      </a>
+
+  </div>
+</div>

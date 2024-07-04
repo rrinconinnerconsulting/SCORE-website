@@ -11,9 +11,15 @@ export default {
 				'sblue-medium':'#0095DA',
 				'sgreen-spad':'#92BF1F'
 			},
-			backgroundImage:{
-				'spad-linecard': "url('/assets/img/spad_line.jpg')"
-			}
+			animation: {
+				'loop-scroll': 'loop-scroll 50s linear infinite',
+			  },
+			  keyframes: {
+				'loop-scroll': {
+				  from: { transform: 'translateX(0)' },
+				  to: { transform: 'translateX(-100%)' },
+				}
+			  },
 		},
 	},
 	plugins: [

@@ -2,7 +2,7 @@
 
 import '@fontsource/poppins';
 import { ViewTransitions } from 'astro:transitions';
-import { Tabs } from 'astro-tabs';
+import Modal from './Modal.astro';
 ---
 
 <head>
@@ -21,14 +21,158 @@ import { Tabs } from 'astro-tabs';
     body{
             font-family: 'Poppins', sans-serif;	
     }
-    
+
+    #banner-principaliot{
+            background-image: url("/src/assets/img/slider_2-iot.png");
+            height: 500px;
+            background-size : cover;
+            background-repeat : no-repeat;
+            background-position: center;
+        }
+
+        @media screen and (min-width:1000px){
+            #asociados-img{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr ;
+            }
+        }
+
+
+    @media screen and (max-width:1160px) {
+        .tabs-icon{
+            gap: 3rem;
+        }
+    }
+
+    @media screen and (max-width:970px){
+
+    h1{
+        font-size: 18px;
+    }
+
+    strong{
+        font-size: 18px;
+    }
+
+    p{
+      font-size: 12px;
+    }
+
+
+    #services-container{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    #services-container > #container-gestiondatos{
+        order: 2;
+    }
+
+    #services-container > #img-gestiondatos{
+        order: 1;
+    }
+
+    #tabs-spadiot{
+        flex-direction: column;
+    }
+
+    #tabs-spadiot > div{
+
+    }
+
+    #img-id{
+        gap: 0px;
+    }
+
+    #img-id > img{
+           height: 250px;  
+    }
+
+    #buttons-tabs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    #banner-principaliot{
+        background-size : contain;
+        background-position: right;
+    }
+
+    #asociados-img{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr ;
+            }
+
+    .tabs-icon{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tabs-icon > #buttons-tabs{
+        order: 1;
+    }
+
+    .tabs-icon > #tabs-spadiot{
+        order: 2;
+    }
+
+    }
+
+    @media screen and (max-width:572px){
+        #order-banner-principal{
+            flex-direction: column;
+        }
+        #order-banner-principal > #text-banerprincipal{
+            order: 2;
+        }
+
+        #banner-principaliot{
+            height: 200px;
+            background-position: top;
+            background-size: cover;
+        }
+
+        #img-gestionados-container{
+            width: 300px;
+        }
+
+        #img-id{
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #container-tabs{
+            padding-bottom: 14rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        
+
+        #buttons-tabs{
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #asociados-img{
+                display: grid;
+                grid-template-columns: 1fr 1fr ;
+            }
+    }
+
+
 </style>
 
 <!-- Banner principal -->
 
-<main class="pt-20 flex items-center gap-9 justify-between">
+<main id="order-banner-principal" class="pt-20 pb-7 flex items-center gap-9 justify-between">
     
-    <div class="pl-14 flex flex-col gap-9 " >
+    <div id="text-banerprincipal" class="pl-14 flex flex-col gap-9 " >
     <img class="w-[200px]" src="src/assets/img/SPAD IoT logo.svg">
     <h1 class="text-2xl font-extrabold text-text-color">
         Datos en <strong class="text-sblue-general font-extrabold">tiempo real</strong> para tomar<br> <strong class="text-2xl text-sblue-general font-extrabold">decisiones inteligentes</strong>
@@ -36,84 +180,89 @@ import { Tabs } from 'astro-tabs';
     <p class="text-base text-text-color max-w-3xl ">
         El análisis de servicios meteorológicos es esencial para la prevención y mitigación de desastres naturales. Al combinar datos climáticos, alertas tempranas y evaluaciones económicas, podemos reducir los impactos negativos en las comunidades.
     </p>
-    <button class="px-5 py-2 bg-sblue-general rounded-3xl  font-bold text-white text-sm max-w-80 hover:bg-sblue-dark">solicitar demostración</button>
+    <Modal></Modal>
     </div>
-    <div class="right-0">
-        <img class="w-[600px]" src="src/assets/img/slider_2-iot.png" alt="score-banner">
-    </div> 
+    <div class="h-full w-full">
+        <div id="banner-principaliot">
+            
+        </div>
+    </div>
     
 </main>
 
 <body>
 
+
     <!-- component -->
-<div class=" flex flex-col justify-between  bg-gradient-to-r from-sblue-general via-sblue-medium to-sgreen-spad shadow-inner shadow-[0px 4px 20.3px 0px rgba(0, 0, 0, 0.25)] w-full pt-5">
+<div id="container-tabs"  class=" flex flex-col justify-between  bg-gradient-to-r from-sblue-general via-sblue-medium to-sgreen-spad shadow-inner shadow-[0px 4px 20.3px 0px rgba(0, 0, 0, 0.25)] w-full pt-5">
     
     <div class="w-full flex flex-col gap-6 justify-center text-center mb-9 ">
         <h3 class="text-2xl text-white"><strong>Herramientas</strong> adaptadas al <strong> monitoreo continuo</strong></h3>
         <p class="text-sm text-white">Nuestra herramienta de equipos en campo te respalda en la <br> prevención de desastres naturales</p>
     </div>
-    <div x-data="{ openTab: 1 }">
-        <div class="w mx-auto flex gap-20">
-            <div x-show="openTab === 1" class="transition-all duration-300">
-                <div class="h-[350px]">
-                    <div class="flex gap-10">
-                        <img class="h-[350px]" src="/src/assets/img/montaje_spad-IoT1.png" alt="">
-                        <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
-                            <p>Nuestros equipos de alta tecnología, recopilan datos en todo momento sobre condiciones climáticas, dentro de los diferentes equipos están sensores de temperatura, humedad, viento entre otros.</p>
-                            <p>Permiten generar alertas tempranas y análisis ante la inminencia de desastres naturales, además de mapear zonas vulnerables y predecir próximas inclemencias ambientales </p>
+    <div  x-data="{ openTab: 1 }">
+        <div class="tabs-icon flex gap-48">
+            <div id="tabs-spadiot" class="gap-9">
+                <div id="tab-spadiot-container" x-show="openTab === 1" class="transition-all duration-300">
+                    <div class="h-[300px]">
+                        <div id="img-id" class="flex content-center justify-center justify-self-center gap-5">
+                            <img  class="h-[300px]" src="/src/assets/img/montaje_spad-IoT1.png" alt="">
+                            <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
+                                <p>Nuestros equipos de alta tecnología, recopilan datos en todo momento sobre condiciones climáticas, dentro de los diferentes equipos están sensores de temperatura, humedad, viento entre otros.</p>
+                                <p>Permiten generar alertas tempranas y análisis ante la inminencia de desastres naturales, además de mapear zonas vulnerables y predecir próximas inclemencias ambientales </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div x-show="openTab === 2" class="transition-all duration-300">
-                <div class="h-[350px]">
-                    <div class="flex gap-10">
-                        <img class="h-[350px]" src="/src/assets/img/montaje_spad-IoT2.png" alt="">
-                        <div class= "w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
-                            <p>Las alertas desempeñan un papel crucial en al prevención de incidentes ambientales, permite identificar etapas antes de los incidentes en tiempo de alertas tempranas, medias y urgentes.
+                <div x-show="openTab === 2" class="transition-all duration-300">
+                    <div class="h-[300px]">
+                        <div id="img-id" class="flex gap-10">
+                            <img class="h-[300px]" src="/src/assets/img/montaje_spad-IoT2.png" alt="">
+                            <div class= "w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
+                                <p>Las alertas desempeñan un papel crucial en al prevención de incidentes ambientales, permite identificar etapas antes de los incidentes en tiempo de alertas tempranas, medias y urgentes.
 
-                                Y proponer medidas preventivas antes posibles riesgos como inundaciones, deslizamientos, precipitaciones altas entre otros,
+                                    Y proponer medidas preventivas antes posibles riesgos como inundaciones, deslizamientos, precipitaciones altas entre otros,
+                                    
+                                    permiten movilizar recurso y equipos en una situación de emergencia temprana, minimizando los impactos negativos y facilitando la recuperación</p>
                                 
-                                permiten movilizar recurso y equipos en una situación de emergencia temprana, minimizando los impactos negativos y facilitando la recuperación</p>
-                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div x-show="openTab === 3" class="transition-all duration-300">
+                    <div class="h-[300px]">
+                        <div id="img-id" class="flex gap-10">
+                            <img class="h-[300px]" src="/src/assets/img/montaje_spad-IoT3.png" alt="">
+                            <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
+                                <p>Obtener datos de manera inmediata  y  poder verlos por zona, equipos o por fecha es algo que te permite SPAD IoT, ahorrar gastos, datos operativos, tiempos y gente.
+
+                                    Al tener los datos agrupados en paneles modulares que se adaptan a las necesidades de medición de datos. Además de acceder a transmisión e instantáneas en vivo, datos del equipo entre otros.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div x-show="openTab === 4" class="transition-all duration-300">
+                    <div class="h-[300px]">
+                        <div id="img-id" class="flex gap-10">
+                            <img class="h-[300px]" src="/src/assets/img/montaje_spad-IoT4.png" alt="">
+                            <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
+                                <p>En nuestra sección de informes, te ofrecemos herramientas como exportar informes a tu gusto integrando elementos específicos, respaldados por datos confiables y actualizados, identificando cuales son los datos claves para exportar informes.
+                                    Detallando datos de forma eficiente y precisa accediendo a datos generados en todo momento con insights profundos sobre tus métricas clave y toma decisiones informadas.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div x-show="openTab === 3" class="transition-all duration-300">
-                <div class="h-[350px]">
-                    <div class="flex gap-10">
-                        <img class="h-[350px]" src="/src/assets/img/montaje_spad-IoT3.png" alt="">
-                        <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
-                            <p>Obtener datos de manera inmediata  y  poder verlos por zona, equipos o por fecha es algo que te permite SPAD IoT, ahorrar gastos, datos operativos, tiempos y gente.
-
-                                Al tener los datos agrupados en paneles modulares que se adaptan a las necesidades de medición de datos. Además de acceder a transmisión e instantáneas en vivo, datos del equipo entre otros.</p>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div x-show="openTab === 4" class="transition-all duration-300">
-                <div class="h-[350px]">
-                    <div class="flex gap-10">
-                        <img class="h-[350px]" src="/src/assets/img/montaje_spad-IoT4.png" alt="">
-                        <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
-                            <p>En nuestra sección de informes, te ofrecemos herramientas como exportar informes a tu gusto integrando elementos específicos, respaldados por datos confiables y actualizados, identificando cuales son los datos claves para exportar informes.
-                                Detallando datos de forma eficiente y precisa accediendo a datos generados en todo momento con insights profundos sobre tus métricas clave y toma decisiones informadas.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-4 flex flex-col text-swhite-color gap-6 text-xs font-bold">
-                <button x-on:click="openTab = 1" :class="{ 'bg-swhite-color text-sblue-general': openTab === 1 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3"> <span class="icon-getway text-lg"></span>Equipos de monitoreo ambiental en campo</button>
-                <button x-on:click="openTab = 2" :class="{ 'bg-swhite-color text-sblue-general': openTab === 2 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3"> <span class="icon-alert_icon text-lg"></span> Alertas tempranas, medias y de alto riesgo</button>
-                <button x-on:click="openTab = 3" :class="{ 'bg-swhite-color text-sblue-general': openTab === 3 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3"> <span class="icon-graphic_icon text-sm"></span> Datos en tiempo real gestionados</button>
-                <button x-on:click="openTab = 4" :class="{ 'bg-swhite-color text-sblue-general': openTab === 4 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3"> <span class="icon-informe_icon text-lg"></span> Informes personalizados y adaptativos</button>
+            <div id="buttons-tabs" class="mb-4 flex flex-col text-swhite-color gap-6 text-xs font-bold">
+                <button x-on:click="openTab = 1" :class="{ 'bg-swhite-color text-sblue-general': openTab === 1 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-getway text-lg"></span>Equipos de monitoreo ambiental</button>
+                <button x-on:click="openTab = 2" :class="{ 'bg-swhite-color text-sblue-general': openTab === 2 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-alert_icon text-lg"></span> Alertas tempranas de riesgo </button>
+                <button x-on:click="openTab = 3" :class="{ 'bg-swhite-color text-sblue-general': openTab === 3 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-graphic_icon text-sm"></span>Datos en tiempo real </button>
+                <button x-on:click="openTab = 4" :class="{ 'bg-swhite-color text-sblue-general': openTab === 4 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-informe_icon text-lg"></span>Informes personalizados </button>
             </div>
         </div>
     </div>
@@ -129,16 +278,16 @@ import { Tabs } from 'astro-tabs';
 
         
 
-        <div class="flex p-[20px] items-center justify-center justify-items-center content-center gap-[100px]">
+        <div id="services-container" class="flex p-[20px] items-center justify-center justify-items-center content-center gap-[100px]">
 
-                    <div class=" max-w-xs items-center flex flex-col gap-6">
+                    <div id="container-gestiondatos" class=" max-w-xs items-center flex flex-col gap-6">
                         <h3 class="text-2xl font-extrabold text-text-color">Gestión de datos <br> en <strong class="text-sky-700 font-extrabold">tiempo real</strong> </h3>
                         <p class="text-center text-xs text-text-color">Nuestros sensores inteligentes están alimentando nuestras bases de datos que permiten generar alertas, proporcionar gráficos precisos</p>
-                        <button class="px-5 py-2 bg-sblue-general rounded-3xl  font-bold text-white text-sm w-[300px] hover:bg-sblue-dark">solicitar demostración</button>
+                        <Modal></Modal>
                     </div>
 
-                    <div >
-                        <img class="w-[700px]" src="/src/assets/img/montaje_spad-Io-extd.png" alt="">
+                    <div id="img-gestiondatos" >
+                        <img id="img-gestionados-container" class="max-w-md" src="/src/assets/img/montaje_spad-Io-extd.png" alt="">
                     </div>
 
         </div>
@@ -147,13 +296,13 @@ import { Tabs } from 'astro-tabs';
     <!-- nuetsro asociados -->
 
 
-    <div>
-        <div class="pl-[60px] pr-[60px] flex justify-between">
+    <div id="asociados-main">
+        <div  class="pl-[60px] pr-[60px] flex justify-between pt-5">
             <h3 class="text-2xl font-extrabold text-text-color w-[300px]">Nuestros <strong class="text-sblue-general font-extrabold"> asociados </strong> </h3>
             <p class="text-right text-xs text-text-color w-[300px]" >Nuestra herramienta es usada por entidades ambientales y de estado para el monitoreo y gestión de posibles riesgos climaticos</p>
         </div>
 
-        <div class="flex p-[60px] justify-center justify-items-center content-center items-center gap-6">
+        <div id="asociados-img" class="flex p-[60px] justify-center justify-items-center content-center items-center gap-6">
             <img src="/src/assets/img/logo 194.png" alt="">
             <img src="/src/assets/img/logo 195.png" alt="">
             <img src="/src/assets/img/logo 196.png" alt="">
