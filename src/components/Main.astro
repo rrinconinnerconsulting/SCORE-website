@@ -6,12 +6,11 @@ import Slider from '../components/Slider.astro'
 
 ---
 
-<link rel="stylesheet" href="/src/assets/icons/style.css">
 
 <style>
 
         #bg-area{
-            background-image: url("/src/assets/img/background-section.png");
+            background-image: url("/public/background-section.png");
             background-size : cover;
             background-repeat : no-repeat;
             background-position: center;
@@ -55,6 +54,12 @@ import Slider from '../components/Slider.astro'
         font-size: 18px;
             }
 
+        #cards-scocoreindustry{
+            padding-right: 1rem;
+        }
+
+        }
+
     @media screen and (max-width:500px){
         #Cards-respons{
                 grid-template-columns: 1fr ;
@@ -63,7 +68,7 @@ import Slider from '../components/Slider.astro'
         #grid-services{
             grid-template-columns: 1fr;
         }
-    }
+    
 
     strong{
         font-size: 18px;
@@ -73,10 +78,10 @@ import Slider from '../components/Slider.astro'
       font-size: 12px;
     }
 
-        }
+    }
 
         #banner-principal{
-            background-image: url("/src/assets/img/render-score.png");
+            background-image: url("/public/render-score.png");
             height: 350px;
             background-size : cover;
             background-repeat : no-repeat;
@@ -163,7 +168,7 @@ import Slider from '../components/Slider.astro'
                         <h2 class="font-bold text-center text-[#606060] text-base">Gestión de procesos en tiempo real</h2>
                     </div>
 
-                    <p class="text-center pt-8 text-xs text-[#606060] ">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    <p class="text-center pt-8 text-xs text-[#606060] ">SCORE te permite analizar tus procesos en tiempo real. Detecta desvíos, optimiza recursos y mejora la eficiencia operativa. Automatiza tus flujos de trabajo</p>
 
                 </div>
 
@@ -175,7 +180,7 @@ import Slider from '../components/Slider.astro'
                         <h2 class="font-bold text-center text-[#606060]">Fácil visualización en formato gráfico</h2>
                     </div>
 
-                    <p class="text-center pt-8 text-[#606060] text-xs">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    <p class="text-center pt-8 text-[#606060] text-xs">Los gráficos dinámicos se  presentan de forma simplificada que te permiten comprender rápidamente la información clave. Sin complicaciones</p>
 
                 </div>
 
@@ -187,7 +192,7 @@ import Slider from '../components/Slider.astro'
                         <h2 class="font-bold text-center text-[#606060] ">Dashboard modular y adaptativo</h2>
                     </div>
 
-                    <p class="text-center pt-8 text-[#606060] text-xs">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    <p class="text-center pt-8 text-[#606060] text-xs">Nuestro dashboard es modular, lo que significa que puedes personalizarlo según tus necesidades. Reorganiza los módulos para obtener la vista perfecta para ti</p>
 
                 </div>
 
@@ -199,7 +204,7 @@ import Slider from '../components/Slider.astro'
                         <h2 class="font-bold text-center text-[#606060] ">Multiplicación en una sola plataforma</h2>
                     </div>
 
-                    <p class="text-center pt-8 text-[#606060] text-xs">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    <p class="text-center pt-8 text-[#606060] text-xs"> Gestiona y realiza múltiples consultas de manera eficiente. Olvídate de los métodos tradicionales y aprovecha la tecnología para simplificar tus cálculos</p>
 
                 </div>
 
@@ -211,17 +216,17 @@ import Slider from '../components/Slider.astro'
                         <h2 class="font-bold text-center text-[#606060] ">Apoyo en tareas complejas asistido con IA</h2>
                     </div>
 
-                    <p class="text-center pt-8 text-neutral-500 text-xs">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    <p class="text-center pt-8 text-neutral-500 text-xs"> Agiliza los procesos. ¿Resuelves problemas complicados? Confiar en nuestra herramienta basada en IA y machine learning </p>
 
                 </div>
 
                 <div class="max-w-80 shadow-2xl p-[25px] mb-4 mt-7 rounded-3xl border-b-4 border-[#1D70B6]">
                     <div class="flex gap-9">
-                        <span class="icon-IA-asistend text-5xl  text-sky-700" ></span>
-                        <h2 class="font-bold text-center text-[#606060] ">Apoyo en tareas complejas asistido con IA</h2>
+                        <span class="icon-informes text-5xl  text-sky-700" ></span>
+                        <h2 class="font-bold text-center text-[#606060] ">Informes personalizados a su negocio</h2>
                     </div>
 
-                    <p class="text-center pt-8 text-neutral-500 text-xs">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                    <p class="text-center pt-8 text-neutral-500 text-xs"> Ya sea un informe completo o parcial, puedes gestionarlo desde nuestros filtros inteligentes que brindan una gestión precisa de datos</p>
 
                 </div>
 
@@ -248,22 +253,22 @@ import Slider from '../components/Slider.astro'
                 <div id="grid-services" class="grid grid-cols-2 gap-[20px] text-center items-center justify-center justify-items-center">
                     <div class="flex gap-[10px] max-w-xs items-center">
                         <span class="icon-real-time text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
-                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                        <p class="text-left">La toma de decisiones basados en datos actualizados en tiempo real. Permite reaccionar rápidamente ante cambios.</p>
                     </div>
 
                     <div class="flex gap-[10px] max-w-xs items-center ">
                         <span class="icon-manitence text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
-                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                        <p class="text-left">La actualización constante y soporte garantiza que siempre puedas acceder a las funcionalidades y mejoras más recientes.</p>
                     </div>
 
                     <div class="flex gap-[10px] max-w-xs items-center">
                         <span class="icon-enlaced text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
-                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                        <p class="text-left">El uso de equipos de alta tecnología conectados a nuestros servidores garantiza un rendimiento óptimo y una integración fluida.</p>
                     </div>
 
                     <div class="flex gap-[10px] max-w-xs items-center">
                         <span class="icon-graphic-3d text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
-                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                        <p class="text-left">El uso de gráficos interactivos cambia la manera en que analizas los datos, permitiendo una exploración profunda y personalizada.</p>
                     </div>
 
 
@@ -273,22 +278,22 @@ import Slider from '../components/Slider.astro'
 
                 <div id="grid-services" class="grid grid-cols-2 gap-[30px] text-center items-center justify-center justify-items-center">
                     <div class="flex gap-[10px] max-w-xs items-center">
-                        <span class="icon-real-time text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
-                        <p class="text-left"> Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
+                        <span class="icon-conexion-datos text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <p class="text-left">Con nuestra plataforma, accede a un dashboard que presenta datos actualizados, ayudándote a identificar y reaccionar rápidamente ante cualquier cambio.</p>
                     </div>
 
                     <div class="flex gap-[10px] max-w-xs items-center ">
-                        <span class="icon-manitence text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <span class="icon-recurses text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <p class="text-left">Te estamos proporcionando los datos necesarios para optimizar las operaciones y los recursos, todo el tiempo.</p>
+                    </div>
+
+                    <div class="flex gap-[10px] max-w-xs items-center">
+                        <span class="icon-flujo-datos text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
                         <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
                     </div>
 
                     <div class="flex gap-[10px] max-w-xs items-center">
-                        <span class="icon-enlaced text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
-                        <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
-                    </div>
-
-                    <div class="flex gap-[10px] max-w-xs items-center">
-                        <span class="icon-graphic-3d text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
+                        <span class="icon-procesos text-4xl bg-[#DDEAF4] p-[8px] rounded-full text-sky-700"></span>
                         <p class="text-left">Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas</p>
                     </div>
 
@@ -297,7 +302,7 @@ import Slider from '../components/Slider.astro'
             </div>
 
             <div class="img-industria max-w-lg">
-                <img src="/src/assets/img/CTA-2.png" alt="">
+                <img src="CTA-2.png" alt="">
             </div>
 
         </div>
@@ -311,35 +316,36 @@ import Slider from '../components/Slider.astro'
                 Áreas <strong class="text-sky-700 font-extrabold">estratégicas</strong> <br> en la industria
             </h2>
             <p class="text-xs  text-[#606060] text-center">
-                Accede a datos actualizados al instante. Observa<br> tendencias, patrones y cambios en tiempo real para tomar <br> decisiones informadas
+                Abarcamos diferentes áreas de la industria desde procesos
+                y procedimientos, reconocimiento de gestos,  el agro, sector comercial, servicios en la nube y domótica en el hogar 
             </p>
             <Modal></Modal>
         </div>
 
        <div id="bg-area">
 
-            <div id="cards-scocoreindustry" class="flex gap-3 justify-center items-center">
+            <div id="cards-scocoreindustry" class="flex gap-3 justify-center items-center pr-[80px]">
                 <div class="bg-gradient-to-r from-[#1D70B6] to-[#0095DA] w-[270px] p-[10px] rounded-2xl  shadow-2xl h-full">
-                    <img src="/src/assets/img/apss.png">
+                    <img src="apss.png">
                 </div>
 
                 <div class="flex flex-col gap-7">
             
                 <div class="w-[250px] flex flex-col gap-3 bg-white p-4 rounded-3xl shadow-2xl">
                         <div class="flex gap-3 items-center justify-center justify-items-center content-center">
-                            <h2 class="font-bold text-center text-[#606060]">Fácil visualización en formato gráfico</h2>
-                            <span class="icon-real-time text-xl p-2 bg-[#1D70B6] rounded-full text-white"></span>
+                            <h2 class="font-bold text-center text-[#606060]">Áreas <b class="font-bold text-center text-sblue-general"> estratégicas</b> en la industria</h2>
+                            <span class="icon-industry1 text-xl p-2 bg-[#1D70B6] rounded-full text-white"></span>
                         </div>
     
                         <p class="text-xs  text-[#606060] ">
-                            Accede a datos actualizados al instante. Observa tendencias, patrones y cambios en tiempo real para tomar decisiones informadas
+                            Abarcando servicios desde el campo, reconocimiento facial, gestión del riesgo  ambiental y servicios en la nube. Tomar decisiones informadas nunca ha sido tan fácil y eficiente.
                         </p>
                 </div>
 
                 <div class="w-[250px] flex flex-col gap-3 bg-white p-4 rounded-3xl shadow-2xl">
                     <div class="flex gap-3 items-center justify-center justify-items-center content-center">
-                        <h2 class="font-bold text-center text-[#606060]">Fácil visualización en formato gráfico</h2>
-                        <span class="icon-real-time text-xl p-2 bg-[#1D70B6] rounded-full text-white"></span>
+                        <h2 class="font-bold text-center text-[#606060]">Adaptabilidad <b class="font-bold text-center text-sblue-general"> Personalizada</b> </h2>
+                        <span class="icon-industry2 text-xl p-2 bg-[#1D70B6] rounded-full text-white"></span>
                     </div>
 
                     <p class="text-xs  text-[#606060] ">

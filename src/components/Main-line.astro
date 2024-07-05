@@ -4,7 +4,7 @@ import '@fontsource/poppins';
 
 ---
 
-<link rel="stylesheet" href="/src/assets/icons/style.css">
+<link rel="stylesheet" href="style.css">
 
 <style>
     main{
@@ -16,7 +16,7 @@ import '@fontsource/poppins';
     }
 
     #banner-principaliot{
-            background-image: url("/src/assets/img/slider 1 - line.png");
+            background-image: url("public/slider 1 - line.png");
             height: 500px;
             background-size : cover;
             background-repeat : no-repeat;
@@ -167,7 +167,7 @@ import '@fontsource/poppins';
 
     
     <div id="text-banerprincipal" class="pl-14 flex flex-col gap-9 " >
-    <img class="w-[200px]" src="src/assets/img/SPAD Line-logo.svg">
+    <img class="w-[200px]" src="SPAD Line-logo.svg">
     <h1 class="text-2xl font-extrabold text-[#606060]">
         Reconocer características<br> <strong class="text-[#1D70B6] font-extrabold"> faciales y gestos</strong> 
     </h1>
@@ -205,7 +205,7 @@ import '@fontsource/poppins';
                     <div id="tab-spadiot-container" x-show="openTab === 1" class="transition-all duration-300">
                         <div class="h-[300px]">
                             <div id="img-id" class="flex gap-10">
-                                <img class="h-[300px]" src="/src/assets/img/montaje_spad-lineT1.png" alt="">
+                                <img class="h-[300px]" src="montaje_spad-lineT1.png" alt="">
                                 <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
                                     <p>Nuestros equipos de alta tecnología, recopilan datos en todo momento sobre condiciones climáticas, dentro de los diferentes equipos están sensores de temperatura, humedad, viento entre otros.</p>
                                     <p>Permiten generar alertas tempranas y análisis ante la inminencia de desastres naturales, además de mapear zonas vulnerables y predecir próximas inclemencias ambientales </p>
@@ -217,7 +217,7 @@ import '@fontsource/poppins';
                     <div x-show="openTab === 2" class="transition-all duration-300">
                         <div class="h-[300px]">
                             <div id="img-id" class="flex gap-10">
-                                <img class="h-[300px]" src="/src/assets/img/montaje_spad-lineT2.png" alt="">
+                                <img class="h-[300px]" src="montaje_spad-lineT2.png" alt="">
                                 <div class= "w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
                                     <p>Las alertas desempeñan un papel crucial en al prevención de incidentes ambientales, permite identificar etapas antes de los incidentes en tiempo de alertas tempranas, medias y urgentes.
 
@@ -233,7 +233,7 @@ import '@fontsource/poppins';
                     <div x-show="openTab === 3" class="transition-all duration-300">
                         <div class="h-[300px]">
                             <div id="img-id" class="flex gap-10">
-                                <img class="h-[300px]" src="/src/assets/img/montaje_spad-lineT3.png" alt="">
+                                <img class="h-[300px]" src="montaje_spad-lineT3.png" alt="">
                                 <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
                                     <p>Obtener datos de manera inmediata  y  poder verlos por zona, equipos o por fecha es algo que te permite SPAD IoT, ahorrar gastos, datos operativos, tiempos y gente.
 
@@ -247,7 +247,7 @@ import '@fontsource/poppins';
                     <div x-show="openTab === 4" class="transition-all duration-300">
                         <div class="h-[300px]">
                             <div id="img-id" class="flex gap-10">
-                                <img class="h-[300px]" src="/src/assets/img/montaje_spad-lineT4.png" alt="">
+                                <img class="h-[300px]" src="montaje_spad-lineT4.png" alt="">
                                 <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
                                     <p>En nuestra sección de informes, te ofrecemos herramientas como exportar informes a tu gusto integrando elementos específicos, respaldados por datos confiables y actualizados, identificando cuales son los datos claves para exportar informes.
                                         Detallando datos de forma eficiente y precisa accediendo a datos generados en todo momento con insights profundos sobre tus métricas clave y toma decisiones informadas.</p>
@@ -258,9 +258,9 @@ import '@fontsource/poppins';
                 </div>
 
                     <div id="buttons-tabs" class="mb-4 flex flex-col text-swhite-color gap-6 text-xs font-bold">
-                        <button x-on:click="openTab = 1" :class="{ 'bg-swhite-color text-sblue-general': openTab === 1 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-getway text-lg"></span>Cámaras de monitoreo en campo</button>
-                        <button x-on:click="openTab = 2" :class="{ 'bg-swhite-color text-sblue-general': openTab === 2 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-alert_icon text-lg"></span> Alertas tempranas, medias y de alto riesgo</button>
-                        <button x-on:click="openTab = 3" :class="{ 'bg-swhite-color text-sblue-general': openTab === 3 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-graphic_icon text-sm"></span> Datos en tiempo real gestionados</button>
+                        <button x-on:click="openTab = 1" :class="{ 'bg-swhite-color text-sblue-general': openTab === 1 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-facial_icon text-lg"></span>Cámaras de monitoreo en campo</button>
+                        <button x-on:click="openTab = 2" :class="{ 'bg-swhite-color text-sblue-general': openTab === 2 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-lente_icon text-lg"></span> Alertas tempranas, medias y de alto riesgo</button>
+                        <button x-on:click="openTab = 3" :class="{ 'bg-swhite-color text-sblue-general': openTab === 3 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-scan_icon text-sm"></span> Datos en tiempo real gestionados</button>
                         <button x-on:click="openTab = 4" :class="{ 'bg-swhite-color text-sblue-general': openTab === 4 }" class="transition-all duration-300 p-3 outline outline-2 rounded-lg flex gap-3 max-w-80"> <span class="icon-informe_icon text-lg"></span> Informes personalizados y adaptativos</button>
                     </div>
                 
@@ -288,7 +288,7 @@ import '@fontsource/poppins';
                     </div>
 
                     <div id="img-gestiondatos" >
-                        <img id="img-gestionados-container" class="w-[400px]" src="/src/assets/img/montaje_spad-Iine-extd.png" alt="">
+                        <img id="img-gestionados-container" class="w-[400px]" src="montaje_spad-Iine-extd.png" alt="">
                     </div>
 
         </div>
@@ -303,11 +303,11 @@ import '@fontsource/poppins';
         </div>
 
         <div id="asociados-img" class="flex p-[60px] justify-center justify-items-center content-center items-center gap-6">
-            <img src="/src/assets/img/logo 194.png" alt="">
-            <img src="/src/assets/img/logo 195.png" alt="">
-            <img src="/src/assets/img/logo 196.png" alt="">
-            <img src="/src/assets/img/logo 197.png" alt="">
-            <img src="/src/assets/img/logo 198.png" alt="">
+            <img src="logo 194.png" alt="">
+            <img src="logo 195.png" alt="">
+            <img src="logo 196.png" alt="">
+            <img src="logo 197.png" alt="">
+            <img src="logo 198.png" alt="">
         </div>
     </div>
     

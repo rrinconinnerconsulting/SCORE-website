@@ -1,9 +1,11 @@
 ---
 import '@fontsource/poppins';
+import ModalNav from './ModalNav.astro';
 import MenuDespligable from './MenuDespligable.astro';
+
 ---
 
-<header class="fixed w-full z-30">
+<header class="fixed w-full z-40">
 
     <style>
         @media screen and (max-width:970px){
@@ -50,72 +52,14 @@ import MenuDespligable from './MenuDespligable.astro';
 
     <nav id="nav-responsive" class="flex justify-between items-center px-20 py-6 bg-white w-full" >
         <div id="li-container" class="flex justify-center items-center gap-14">
-            <img id="block-responsive-button" class="w-6 cursor-pointer" src="/src/assets/img/menu-svgrepo-com.svg" alt="menu-svgrepo-com.svg">
-            <a href="/"><img id="logo-scorenav" src="/src/assets/img/logo-score.svg" alt="Logo Score"></a>
+            <img id="block-responsive-button" class="w-6 cursor-pointer" src="menu-svgrepo-com.svg" alt="menu-svgrepo-com.svg">
+            <a href="/"><img id="logo-scorenav" src="logo-score.svg" alt="Logo Score"></a>
             <a id="menu-button" class="text-sm list-none cursor-pointer hover:text-sblue-general active:font-bold" aria-current="page">soluciones</a>
             <a id='responsive-element' href="/contact" class="text-sm list-none  hover:text-sblue-general active:font-bold cursor-pointer">contacto</a>
         </div>
     
         <div class="flex gap-5">
-            <div>
-                <div x-data="{ showModal: false, email: '' }">
-                  <!-- Button to open the modal -->
-                  <button @click="showModal = true" id="text-button" class="px-5 py-2 bg-swhite-color text-sblue-general rounded-3xl  font-bold text-sm hover:bg-sblue-general outline outline-2 hover:text-swhite-color focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100">Solicitar Demostración</button>
-                  <!-- Background overlay -->
-                  <div x-show="showModal" class="fixed inset-0 transition-opacity" aria-hidden="true" @click="showModal = false">
-                    <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-                  </div>
-
-                  <!-- Modal -->
-                  <div x-show="showModal" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="fixed inset-0 overflow-y-auto" x-cloak>
-                    <div>
-                      <!-- Modal panel -->
-                      <div class="max-w-3xl justify-items-center content-center items-center mx-auto self-center " role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-                        <div class="bg-white mt-7 pr-5 rounded-2xl ">
-                          <!-- Modal content -->
-                          <div class="sm:flex items-center">
-                            <!-- Modal img -->
-                            <style>
-                                .clip-path{
-                                    clip-path: polygon(0 0, 93% 0, 73% 100%, 0% 100%);
-                                }
-                            </style>
-                            <div>
-                                <div>
-                                    <img  src="/src/assets/img/modal-img.png" alt="score-modal">
-                                </div>
-                            </div>
-                            
-                            <div class="w-full mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left flex flex-col gap-3 justify-center">
-                              <h3 class="text-center text-lg text-text-color" id="modal-headline"> ¿Te gustaría una demostración de nuestra plataforma de gestión SCORE? </h3>
-                              <div class="flex flex-col gap-2">
-                                <p class="text-center text-xs text-text-color "> conoce todas nuestras soluciones orientadas a 
-                                    diferentes sectores de la industria y sus funcionalidades. Comprueba lo fácil que es integrar SCORE a tus procesos, tareas e impulsos empresariales y de mercado </p>
-                                <!-- Email input -->
-                                <input type="email" x-model="email" class=" p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:border-blue-500" placeholder="correo electrónico">
-                                <div class="flex justify-between">
-                                    <label for="default-checkbox" class="text-xs text-text-color dark:text-gray-300">Quiero recibir comunicaciones y actualizaciones de SCORE </label>
-                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-sblue-general bg-gray-100 border-gray-300 rounded focus:ring-sblue-general dark:focus:sblue-general dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                </div>
-                            </div>
-                              <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse gap-3">
-                                <!-- Subscribe button -->
-                                <button @click="subscribeToNewsletter" type="button" class="px-5 py-2 bg-[#1D70B6] rounded-3xl  font-bold text-white text-sm hover:bg-[#263261]"> Recibir información </button>
-                                <!-- Cancel button -->
-                                <button @click="showModal = false" type="button" class="px-5 py-2 bg-swhite-color text-sblue-general rounded-3xl  font-bold text-sm hover:bg-sblue-general outline outline-2 hover:text-swhite-color focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100"> Regresar </button>
-                              </div>
-                            </div>
-                            
-                          </div>
-                          
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
+            <ModalNav></ModalNav>
 
             <button id='responsive-element' class="px-5 py-2 bg-[#1D70B6] rounded-3xl  font-bold text-white text-sm hover:bg-[#263261]">iniciar sesión SCORE</button>
         </div>
@@ -123,7 +67,7 @@ import MenuDespligable from './MenuDespligable.astro';
     </nav>
 
     <div  class=" flex w-full">
-        <img src="/src/assets/img/background-border-nav.png" alt="border img">
+        <img src="background-border-nav.png" alt="border img">
     </div>
 
     <div id="menu-open" class="p-10 mt-[-70px] bg-white w-full hidden">
@@ -135,11 +79,11 @@ import MenuDespligable from './MenuDespligable.astro';
 
             <div class="flex justify-between">
                 <a class="flex text-sm items-center gap-4" href="/Spad_IoT">
-                    <img src="/src/assets/img/icon_spadiot.svg" alt="SPAD iot icono">
+                    <img src="icon_spadiot.svg" alt="SPAD iot icono">
                     <p><strong class="text-[#1D70B6]">SPAD IoT</strong>   Gestión del riesgo ambiental</p>
                 </a>
                 <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
-                    <img class="h-[23px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
+                    <img class="h-[23px]" src="novedad.gif" alt="novedad icono">
                     <p class="text-white text-xs" >Novedad</p>
                 </div>
             </div>
@@ -148,11 +92,11 @@ import MenuDespligable from './MenuDespligable.astro';
             
             <div class="flex justify-between col-start-1 row-start-2 ">
                 <a class="flex text-sm items-center gap-4" href="/Spad_Line">
-                    <img src="/src/assets/img/icon_spaline.svg" alt="SPAD line icono">
+                    <img src="icon_spaline.svg" alt="SPAD line icono">
                     <p><strong class="text-[#1D70B6]">SPAD Line</strong>   Reconocimiento facial y de gestos</p>
                 </a>
                 <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
-                    <img class="h-[23px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
+                    <img class="h-[23px]" src="novedad.gif" alt="novedad icono">
                     <p class="text-white text-xs" >Novedad</p>
                 </div>
             </div>
@@ -161,65 +105,48 @@ import MenuDespligable from './MenuDespligable.astro';
             
             <div class="flex justify-between col-start-1 row-start-3">
                 <a class="flex text-sm items-center gap-4">
-                    <img src="/src/assets/img/icon_spadfarm.svg" alt="SPAD farm icono">
+                    <img src="icon_spadfarm.svg" alt="SPAD farm icono">
                     <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Farm</strong> Tecnología enfocado al Agro  </p>
-                </a>
-                <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
-                    <img class="h-[23px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-                    <p class="text-white text-xs" >Novedad</p>
-                </div>
+                </a>               
             </div>
 
             <!-- spad Struccture -->
             
             <div class="flex justify-between col-start-1 row-start-4">
                 <a class="flex text-sm items-center gap-4">
-                    <img src="/src/assets/img/icon_spadstruccture.svg" alt="SPAD Struccture icono">
+                    <img src="icon_spadstruccture.svg" alt="SPAD Struccture icono">
                     <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Struccture</strong>  Servicios en la nube</p>
                 </a>
-                <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
-                    <img class="h-[23px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-                    <p class="text-white text-xs" >Novedad</p>
-                </div>
             </div>
 
             <!-- spad home -->
             
             <div class="flex justify-between col-start-1 row-start-5">
                 <a class="flex text-sm items-center gap-4">
-                    <img src="/src/assets/img/icon_spadhome.svg" alt="SPAD home icono">
+                    <img src="icon_spadhome.svg" alt="SPAD home icono">
                     <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Home</strong>  Asistencia en el hogar</p>
                 </a>
-                <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
-                    <img class="h-[23px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-                    <p class="text-white text-xs" >Novedad</p>
-                </div>
+
             </div>
 
             <!-- spad Retail -->
             
             <div class="flex justify-between col-start-2 row-start-1">
                 <a class="flex text-sm items-center gap-4">
-                    <img src="/src/assets/img/icon_spadretail.svg" alt="SPAD Retail icono">
+                    <img src="icon_spadretail.svg" alt="SPAD Retail icono">
                     <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75" ><strong>SPAD Retail</strong>   Supervición de procesos</p>
                 </a>
-                <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
-                    <img class="h-[23px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-                    <p class="text-white text-xs" >Novedad</p>
-                </div>
+  
             </div>
 
             <!-- spad Mall -->
             
             <div class="flex justify-between col-start-2 row-start-2">
                 <a class="flex text-sm items-center gap-4">
-                    <img src="/src/assets/img/icon_spadmall.svg" alt="SPAD Mall icono">
+                    <img src="icon_spadmall.svg" alt="SPAD Mall icono">
                     <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong >SPAD Mall</strong>   Asistencia comercial</p>
                 </a>
-                <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
-                    <img class="h-[23px]" src="/src/assets/img/novedad.gif" alt="novedad icono">
-                    <p class="text-white text-xs" >Novedad</p>
-                </div>
+
             </div>
 
         </div>
