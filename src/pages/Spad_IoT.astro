@@ -13,11 +13,76 @@ import '@fontsource/poppins';
 		main{
 				font-family: 'Poppins', sans-serif;	
 		}
+
+		.loader {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 50;
+		}
+
+		.hidden {
+		display: none;
+		}
+
+		.content {
+		display: none;
+		}
+
+		.content.loaded {
+		display: block;
+		}
+
+		#img-loader{
+			margin: 0% auto;
+			padding-top: 15rem;
+		}
 	</style>
+
+	<div id="loader" class="loader  w-full h-full bg-white">
+		<img id="img-loader" src="/public/loader_score.gif" alt="Cargando..." class="w-[400px]">
+	</div>
+
+	<script>
+		// src/scripts.js
+		document.addEventListener("DOMContentLoaded", function() {
+		const loader = document.getElementById("loader");
+		const content = document.getElementById("content");
+
+		// Verifica si los elementos existen
+		if (loader) {
+			console.log("Loader encontrado");
+		} else {
+			console.error("Loader no encontrado");
+		}
+
+		if (content) {
+			console.log("Content encontrado");
+		} else {
+			console.error("Content no encontrado");
+		}
+
+		if (loader && content) {
+			// Simula una carga con un timeout (puedes eliminar esto en producción)
+			setTimeout(() => {
+			console.log("Añadiendo clases 'hidden' y 'loaded'");
+			loader.classList.add("hidden");
+			content.classList.add("loaded");
+			}, 500); // Tiempo de simulación de carga (2 segundos)
+		}
+		});
+
+	</script>
+
+<div id="content" class="content hidden">
+
 	<Chat/>
 	<Nav/>
 	<Main/>
 	<Footer/>
+
+</div>
 	
 </Layout>
 

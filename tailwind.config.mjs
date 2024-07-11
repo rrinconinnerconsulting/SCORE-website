@@ -11,8 +11,16 @@ export default {
 				'sblue-medium':'#0095DA',
 				'sgreen-spad':'#92BF1F'
 			},
+			keyframes: {
+				'slide-left': {
+				  from: { transform: 'translateX(0)' },
+				  to: { transform: 'translateX(-100%)' },
+				},
+			},
 			animation: {
 				'loop-scroll': 'loop-scroll 50s linear infinite',
+				'infinite-scroll': 'infinite-scroll 25s linear infinite',
+				'slide-left': 'slide-left 8s linear infinite'
 			  },
 			  keyframes: {
 				'loop-scroll': {

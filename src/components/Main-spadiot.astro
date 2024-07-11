@@ -3,6 +3,7 @@
 import '@fontsource/poppins';
 import { ViewTransitions } from 'astro:transitions';
 import Modal from './Modal.astro';
+import CarrouselLogos from './CarrouselLogos.astro';
 ---
 
 <head>
@@ -25,9 +26,9 @@ import Modal from './Modal.astro';
     #banner-principaliot{
             background-image: url("/public/slider_2-iot.png");
             height: 500px;
-            background-size : cover;
+            background-size : contain;
             background-repeat : no-repeat;
-            background-position: center;
+            background-position: right;
         }
 
         @media screen and (min-width:1000px){
@@ -95,8 +96,8 @@ import Modal from './Modal.astro';
     }
 
     #banner-principaliot{
-        background-size : contain;
-        background-position: right;
+        background-size : cover;
+        background-position: center;
     }
 
     #asociados-img{
@@ -184,7 +185,7 @@ import Modal from './Modal.astro';
     </div>
     <div class="h-full w-full">
         <div id="banner-principaliot">
-            
+                <img src="/public/background-blanco.png" alt="score render" class="h-full">
         </div>
     </div>
     
@@ -296,18 +297,14 @@ import Modal from './Modal.astro';
     <!-- nuetsro asociados -->
 
 
-    <div id="asociados-main">
-        <div  class="pl-[60px] pr-[60px] flex justify-between pt-5">
-            <h3 class="text-2xl font-extrabold text-text-color w-[300px]">Nuestros <strong class="text-sblue-general font-extrabold"> asociados </strong> </h3>
-            <p class="text-right text-xs text-text-color w-[300px]" >Nuestra herramienta es usada por entidades ambientales y de estado para el monitoreo y gestión de posibles riesgos climaticos</p>
+    <div class="mb-11">
+        <div id="asociados-main" class="pl-[60px] pr-[60px] mb-6 mt-6 flex justify-between">
+            <h3 class="text-2xl font-extrabold text-neutral-500 w-[300px]">Nuestros <strong class="text-sky-700 font-extrabold"> asociados </strong> </h3>
+            <p class="text-right text-xs text-neutral-500 w-[300px]" >Nuestra herramienta es usada por entidades ambientales y de estado para el monitoreo y gestión de posibles riesgos climaticos</p>
         </div>
 
-        <div id="asociados-img" class="flex p-[60px] justify-center justify-items-center content-center items-center gap-6">
-            <img src="logo 194.png" alt="">
-            <img src="logo 195.png" alt="">
-            <img src="logo 196.png" alt="">
-            <img src="logo 197.png" alt="">
-            <img src="logo 198.png" alt="">
+        <div>
+            <CarrouselLogos></CarrouselLogos>
         </div>
     </div>
 
