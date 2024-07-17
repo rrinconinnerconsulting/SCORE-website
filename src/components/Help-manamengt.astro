@@ -1,26 +1,39 @@
 ---
 ---
 
-<header>
-    <script>
-        const button = document.querySelector('#help-button') as Element;
-        const menuOpen = document.querySelector('#help-open') as Element;
-        const closeOpen = document.querySelector('#close-open') as Element;
-    
-        button.addEventListener("click", () => {
-            menuOpen.classList.toggle("hidden");
-        });
+<style>
 
-        closeOpen.addEventListener("click", () => {
-            menuOpen.classList.toggle("hidden");
-        });
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
 
-    </script>
-</header>
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
 
-    <style>
-        @media screen and (max-width:572px){
+.fade-out {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+@media screen and (max-width:572px){
             #order-flex{
                 flex-direction:column;
                 bottom: 5px;
@@ -28,7 +41,46 @@
                 gap: 1rem;
             }
         }
-    </style>
+        
+</style>
+
+
+<header>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const button = document.querySelector('#help-button');
+            const menuOpen = document.querySelector('#help-open');
+            const closeOpen = document.querySelector('#close-open');
+
+            if (button && menuOpen && closeOpen) {
+                button.addEventListener("click", () => {
+                    if (menuOpen.classList.contains("hidden")) {
+                        menuOpen.classList.remove("hidden");
+                        menuOpen.classList.remove("fade-out");
+                        menuOpen.classList.add("fade-in");
+                    } else {
+                        menuOpen.classList.remove("fade-in");
+                        menuOpen.classList.add("fade-out");
+                        setTimeout(() => {
+                            menuOpen.classList.add("hidden");
+                        }, 300); // La duración debe coincidir con la duración de la animación fadeOut
+                    }
+                });
+
+                closeOpen.addEventListener("click", () => {
+                    menuOpen.classList.remove("fade-in");
+                    menuOpen.classList.add("fade-out");
+                    setTimeout(() => {
+                        menuOpen.classList.add("hidden");
+                    }, 300); // La duración debe coincidir con la duración de la animación fadeOut
+                });
+            } else {
+                console.error("Uno o más elementos no se encontraron en el DOM");
+            }
+        });
+    </script>
+</header>
+
 
 <div id="order-flex" class="fixed bottom-[50px] right-[50px] flex items-end gap-6 z-30">
 

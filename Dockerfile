@@ -14,7 +14,7 @@ RUN npm install --only=production
 COPY . .
 
 # Expón el puerto en el que la aplicación expone
-EXPOSE 3000
+EXPOSE 4321
 
 # Comando para ejecutar la aplicación
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]

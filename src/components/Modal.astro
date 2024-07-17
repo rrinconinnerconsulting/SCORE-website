@@ -4,65 +4,6 @@
 
 <div class="flex gap-5">
 
-  <style>
-
-@media screen and (max-width:1160px) {
-        .tabs-icon{
-            gap: 3rem;
-        }
-    }
-      #button-modal{
-          z-index: 0;
-      }
-
-      #ver-modal{
-          z-index: 40;
-      }
-
-      #modal-content{
-          z-index: 50;
-      }
-
-      @media screen and (max-width:800px) {
-
-        h1{
-            font-size: 18px;
-        }
-
-        strong{
-            font-size: 18px;
-        }
-
-        p{
-          font-size: 12px;
-        }
-
-        #modal-content{
-          width: 380px;
-          margin: 0% auto;
-        }
-
-        #card-moidal{
-          padding-left:1rem;
-        }
-
-        #img-modal{
-          display: none;
-        }
-
-        button{
-          font-size: 12px;
-        }
-      }
-
-      @media screen and (max-width:500px){
-        #button-modal{
-          font-size: 12px;
-        }
-      }
-
-  </style>
-
   <div>
       <div x-data="{ showModal: false, email: '' }" >
         <!-- Button to open the modal -->

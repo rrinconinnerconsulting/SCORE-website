@@ -1,171 +1,8 @@
 ---
-
 import '@fontsource/poppins';
-import { ViewTransitions } from 'astro:transitions';
 import Modal from './Modal.astro';
 import CarrouselLogos from './CarrouselLogos.astro';
 ---
-
-<head>
-    
-<ViewTransitions/>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<style>
-    main{
-            font-family: 'Poppins', sans-serif;	
-    }
-
-    body{
-            font-family: 'Poppins', sans-serif;	
-    }
-
-    #banner-principaliot{
-            background-image: url("/public/slider_2-iot.png");
-            height: 500px;
-            background-size : contain;
-            background-repeat : no-repeat;
-            background-position: right;
-        }
-
-        @media screen and (min-width:1000px){
-            #asociados-img{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr ;
-            }
-        }
-
-
-    @media screen and (max-width:1160px) {
-        .tabs-icon{
-            gap: 3rem;
-        }
-    }
-
-    @media screen and (max-width:970px){
-
-    h1{
-        font-size: 18px;
-    }
-
-    strong{
-        font-size: 18px;
-    }
-
-    p{
-      font-size: 12px;
-    }
-
-
-    #services-container{
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    #services-container > #container-gestiondatos{
-        order: 2;
-    }
-
-    #services-container > #img-gestiondatos{
-        order: 1;
-    }
-
-    #tabs-spadiot{
-        flex-direction: column;
-    }
-
-    #tabs-spadiot > div{
-
-    }
-
-    #img-id{
-        gap: 0px;
-    }
-
-    #img-id > img{
-           height: 250px;  
-    }
-
-    #buttons-tabs{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-    }
-
-    #banner-principaliot{
-        background-size : cover;
-        background-position: center;
-    }
-
-    #asociados-img{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr ;
-            }
-
-    .tabs-icon{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .tabs-icon > #buttons-tabs{
-        order: 1;
-    }
-
-    .tabs-icon > #tabs-spadiot{
-        order: 2;
-    }
-
-    }
-
-    @media screen and (max-width:572px){
-        #order-banner-principal{
-            flex-direction: column;
-        }
-        #order-banner-principal > #text-banerprincipal{
-            order: 2;
-        }
-
-        #banner-principaliot{
-            height: 200px;
-            background-position: top;
-            background-size: cover;
-        }
-
-        #img-gestionados-container{
-            width: 300px;
-        }
-
-        #img-id{
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        #container-tabs{
-            padding-bottom: 14rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        
-
-        #buttons-tabs{
-            grid-template-columns: 1fr;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        #asociados-img{
-                display: grid;
-                grid-template-columns: 1fr 1fr ;
-            }
-    }
-
 
 </style>
 
@@ -174,7 +11,7 @@ import CarrouselLogos from './CarrouselLogos.astro';
 <main id="order-banner-principal" class="pt-20 pb-7 flex items-center gap-9 justify-between">
     
     <div id="text-banerprincipal" class="pl-14 flex flex-col gap-9 " >
-    <img class="w-[200px]" src="SPAD IoT logo.svg">
+    <img class="w-[200px]" src="/SPAD IoT logo.svg">
     <h1 class="text-2xl font-extrabold text-text-color">
         Datos en <strong class="text-sblue-general font-extrabold">tiempo real</strong> para tomar<br> <strong class="text-2xl text-sblue-general font-extrabold">decisiones inteligentes</strong>
     </h1>
@@ -185,7 +22,7 @@ import CarrouselLogos from './CarrouselLogos.astro';
     </div>
     <div class="h-full w-full">
         <div id="banner-principaliot">
-                <img src="/public/background-blanco.png" alt="score render" class="h-full">
+                <img src="/background-blanco.png" alt="score render" class="h-full">
         </div>
     </div>
     
@@ -207,7 +44,7 @@ import CarrouselLogos from './CarrouselLogos.astro';
                 <div id="tab-spadiot-container" x-show="openTab === 1" class="transition-all duration-300">
                     <div class="h-[300px]">
                         <div id="img-id" class="flex content-center justify-center justify-self-center gap-5">
-                            <img  class="h-[300px]" src="montaje_spad-IoT1.png" alt="">
+                            <img  class="h-[300px]" src="/montaje_spad-IoT1.png" alt="">
                             <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
                                 <p>Nuestros equipos de alta tecnología, recopilan datos en todo momento sobre condiciones climáticas, dentro de los diferentes equipos están sensores de temperatura, humedad, viento entre otros.</p>
                                 <p>Permiten generar alertas tempranas y análisis ante la inminencia de desastres naturales, además de mapear zonas vulnerables y predecir próximas inclemencias ambientales </p>
@@ -219,7 +56,7 @@ import CarrouselLogos from './CarrouselLogos.astro';
                 <div x-show="openTab === 2" class="transition-all duration-300">
                     <div class="h-[300px]">
                         <div id="img-id" class="flex gap-10">
-                            <img class="h-[300px]" src="montaje_spad-IoT2.png" alt="">
+                            <img class="h-[300px]" src="/montaje_spad-IoT2.png" alt="">
                             <div class= "w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
                                 <p>Las alertas desempeñan un papel crucial en al prevención de incidentes ambientales, permite identificar etapas antes de los incidentes en tiempo de alertas tempranas, medias y urgentes.
 
@@ -235,7 +72,7 @@ import CarrouselLogos from './CarrouselLogos.astro';
                 <div x-show="openTab === 3" class="transition-all duration-300">
                     <div class="h-[300px]">
                         <div id="img-id" class="flex gap-10">
-                            <img class="h-[300px]" src="montaje_spad-IoT3.png" alt="">
+                            <img class="h-[300px]" src="/montaje_spad-IoT3.png" alt="">
                             <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
                                 <p>Obtener datos de manera inmediata  y  poder verlos por zona, equipos o por fecha es algo que te permite SPAD IoT, ahorrar gastos, datos operativos, tiempos y gente.
 
@@ -249,7 +86,7 @@ import CarrouselLogos from './CarrouselLogos.astro';
                 <div x-show="openTab === 4" class="transition-all duration-300">
                     <div class="h-[300px]">
                         <div id="img-id" class="flex gap-10">
-                            <img class="h-[300px]" src="montaje_spad-IoT4.png" alt="">
+                            <img class="h-[300px]" src="/montaje_spad-IoT4.png" alt="">
                             <div class= " w-[250px] text-xs left-[400px] bottom-[270px] flex flex-col gap-6 text-white">
                                 <p>En nuestra sección de informes, te ofrecemos herramientas como exportar informes a tu gusto integrando elementos específicos, respaldados por datos confiables y actualizados, identificando cuales son los datos claves para exportar informes.
                                     Detallando datos de forma eficiente y precisa accediendo a datos generados en todo momento con insights profundos sobre tus métricas clave y toma decisiones informadas.</p>
@@ -288,7 +125,7 @@ import CarrouselLogos from './CarrouselLogos.astro';
                     </div>
 
                     <div id="img-gestiondatos" >
-                        <img id="img-gestionados-container" class="max-w-md" src="montaje_spad-Io-extd.png" alt="">
+                        <img id="img-gestionados-container" class="max-w-md" src="/montaje_spad-Io-extd.png" alt="">
                     </div>
 
         </div>

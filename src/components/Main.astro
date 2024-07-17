@@ -7,134 +7,19 @@ import Slider from '../components/Slider.astro'
 ---
 
 
-<style>
-
-        #bg-area{
-            background-image: url("/public/background-section.png");
-            background-size : cover;
-            background-repeat : no-repeat;
-            background-position: center;
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-        }
-
-        @media screen and (max-width:970px){
-            #Cards-respons{
-                grid-template-columns: 1fr 1fr;
-            }
-
-            #industriy-container{
-                display: flex;
-                flex-direction: column;
-            }
-
-            #industriy-container > #text-container{
-                order: 2;
-
-            }
-
-            #industriy-container > img-industria{
-                order: 1;
-            }
-
-            #info-areas{
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            h1{
-        font-size: 18px;
-            }
-
-            h2{
-        font-size: 18px;
-            }
-
-            h3{
-        font-size: 18px;
-            }
-
-        #cards-scocoreindustry{
-            padding-right: 1rem;
-        }
-
-        }
-
-    @media screen and (max-width:500px){
-        #Cards-respons{
-                grid-template-columns: 1fr ;
-            }
-
-        #grid-services{
-            grid-template-columns: 1fr;
-        }
-    
-
-    strong{
-        font-size: 18px;
-    }
-
-    p{
-      font-size: 12px;
-    }
-
-    }
-
-        #banner-principal{
-            background-image: url("/public/render-score.png");
-            height: 350px;
-            background-size : cover;
-            background-repeat : no-repeat;
-            background-position: center;
-        }
-
-        @media screen and (min-width:970px){
-        #banner-principal{
-            background-size : cover;
-            background-position: right;
-            height: 400px;
-        }
-        }
-
-        
-    @media screen and (max-width:572px){
-        #order-banner-principal{
-            flex-direction: column;
-        }
-        #order-banner-principal > #text-banerprincipal{
-            order: 2;
-        }
-
-        #text-info{
-            padding-left: 0px;
-        }
-        #cards-scocoreindustry{
-            width: 100vw;
-        }
-        #cards-scocoreindustry{
-                flex-direction: column;
-            }
-        #banner-principal{
-            height: 200px;
-        }
-    }
-
-</style>
-
 <!-- Banner principal -->
 
 <main id="order-banner-principal" class="pt-24 flex gap-9 justify-center items-center justify-items-center content-center">
 
-    <div id="text-banerprincipal" class="pl-14 flex flex-col gap-9 " >
+    <div id="text-banerprincipal" class="pl-36 xl:pl-48 flex flex-col gap-9 ">
     <h1 class="text-2xl font-extrabold text-[#606060]">
         Datos en <strong class="text-[#1D70B6] font-extrabold">al instante</strong> para tomar<br> <strong class="text-2xl text-[#1D70B6] font-extrabold">decisiones inteligentes</strong>
     </h1>
     <p class="text-base text-[#606060] ">
         SCORE te proporciona información precisa sobre 
-        el entorno para optimizar tus operaciones, 
+        el entorno para optimizar tus operaciones.<br><br>
 
-        Te brindamos un portafolio de servicios completo y 
-        dinámico que se adapta a tus necesidades
+        Disponemos de un portafolio de servicios completo y dinámico que se adapta a tus necesidades.
 
         <Modal></Modal>
     </p>
@@ -142,7 +27,7 @@ import Slider from '../components/Slider.astro'
 
     <div id="img-bannerprincipal" class="h-full w-full">
         <div id="banner-principal">
-            <img src="/public/background-blanco.png" alt="score render">
+            <img src="background-blanco.png" alt="score render" class="h-full">
         </div>
     </div> 
     
@@ -310,14 +195,14 @@ import Slider from '../components/Slider.astro'
 
     <!-- servicios en la industria -->
 
-    <div id="info-areas" class="flex items-center justify-between"> 
-        <div id="text-info" class="max-w-lg flex flex-col gap-[30px] pl-[60px] items-center justify-center justify-items-center content-center">
+    <div id="info-areas" class="flex items-center justify-center gap-24"> 
+        <div id="text-info" class="max-w- flex flex-col gap-[30px] items-center justify-center justify-items-center content-center">
             <h2 class="text-2xl font-extrabold text-[#606060] text-center">
                 Áreas <strong class="text-sky-700 font-extrabold">estratégicas</strong> <br> en la industria
             </h2>
             <p class="text-xs  text-[#606060] text-center">
-                Abarcamos diferentes áreas de la industria desde procesos
-                y procedimientos, reconocimiento de gestos,  el agro, sector comercial, servicios en la nube y domótica en el hogar 
+                Abarcamos diferentes áreas de la industria desde <br> procesos
+                y procedimientos, <br> reconocimiento de gestos,  el agro, sector comercial, <br> servicios en la nube y domótica en el hogar 
             </p>
             <Modal></Modal>
         </div>

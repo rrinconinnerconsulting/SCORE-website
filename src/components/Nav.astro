@@ -1,209 +1,224 @@
 ---
 import '@fontsource/poppins';
-import ModalNav from './ModalNav.astro';
 import MenuDespligable from './MenuDespligable.astro';
 
 ---
 
-<header class="fixed w-full z-40">
-
-    <style>
-        @media screen and (max-width:970px){
-    #menu-button, #responsive-element {
-    display: none;
-        }
-        #nav-responsive{
-        padding: 15px;
-    }
-
-    #text-button{
-        font-size: 12px;
-    }
-
-    #responsive-place{
-        display: block;
-    }
-        }
-
-        @media screen and (min-width:970px){
-    #block-responsive-button{
-        display: none;
-    
-    }
-        }
-
-        @media screen and (max-width:500px){
-            #li-container{
-                gap: 1rem;
-            }
-
-        }
-
-        @media screen and (max-width:400px){
-            #text-button{
-                font-size: 10px;
-            }
-
-            #logo-scorenav{
-                width: 6rem
-            }
-        }
-
-    </style>
-
-    <nav id="nav-responsive" class="flex justify-between items-center px-20 py-6 bg-white w-full" >
-        <div id="li-container" class="flex justify-center items-center gap-14">
-            <img id="block-responsive-button" class="w-6 cursor-pointer" src="menu-svgrepo-com.svg" alt="menu-svgrepo-com.svg">
-            <a href="/"><img id="logo-scorenav" src="logo-score.svg" alt="Logo Score"></a>
-            <a id="menu-button" class="text-sm list-none cursor-pointer hover:text-sblue-general active:font-bold flex items-center gap-3" aria-current="page">soluciones <span class="icon-row text-[7px]"></span></a>
-            <a id='responsive-element' href="/contact" class="text-sm list-none  hover:text-sblue-general active:font-bold cursor-pointer">contacto</a>
-        </div>
-    
-        <div class="flex gap-5">
-            <ModalNav></ModalNav>
-
-            <a href="https://auth.score.net.co/realms/score/protocol/openid-connect/auth?client_id=frontend-client&scope=openid%20email%20profile&response_type=code&redirect_uri=https%3A%2F%2Fscore.net.co%2Fapi%2Fauth%2Fcallback%2Fkeycloak&state=mAaFOUMy39njQ1Cjz2zmigfR-FeTPm2EAsc1gPp2MNg&code_challenge=LF24J426Kugcj87VApslPiKhhhEd_yR8XTs8nG2rAZo&code_challenge_method=S256" id='responsive-element' class="px-5 py-2 bg-[#1D70B6] rounded-3xl  font-bold text-white text-sm hover:bg-[#263261] ">Ingresar SCORE</a>
-        </div>
-    
-    </nav>
-
-    <div  class=" flex w-full">
-        <img class="w-full"  src="background-border-nav.png" alt="border img">
-    </div>
-
-
-    <div id="menu-open" class="w-screen h-screen bg-black hidden bg-opacity-50">
-
-    <div class="p-10 mt-[-70px] bg-white w-full ">
-        <p class="font-bold text-[#1D70B6] pb-6 text-xm text-center">Soluciones</p>
+<body>
+    <header class="fixed w-full z-40">      
         
-        <div class="flex justify-center">
+        <nav id="nav-responsive" class="flex justify-between items-center px-20 py-6 bg-white w-full">
+            <div id="li-container" class="flex justify-center items-center gap-14">
+                <img id="block-responsive-button" class="w-6 cursor-pointer" src="menu-svgrepo-com.svg"
+                    alt="menu-svgrepo-com.svg">
+                <a href="/"><img id="logo-scorenav" src="logo-score.svg" alt="Logo Score"></a>
+                <a id="menu-button"
+                    class="text-sm list-none cursor-pointer hover:text-sblue-general active:font-bold flex items-center gap-3"
+                    aria-current="page">soluciones <span class="icon-row text-[7px]"></span></a>
+                <a id='responsive-element' href="/contact"
+                    class="text-sm list-none  hover:text-sblue-general active:font-bold cursor-pointer">contacto</a>
+            </div>
 
-        <div class="grid grid-cols-2 grid-rows-4 gap-9 justify-center">
+            <div class="flex gap-5">
+                <div id="modal-button">
+                    <a class="px-5 py-2 bg-swhite-color text-sblue-general rounded-3xl  font-bold text-sm hover:bg-sblue-general outline outline-2 hover:text-swhite-color focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100" href="/Demostration">Solicitar Demostración</a>
+                </div>
 
-            <!-- spad IoT -->
-                <div>
-                    <h3 class="font-bold text-xs pb-3 text-sblue-general">Gestión del riesgo ambiental</h3>
-                    <div class="flex gap-6">
-                        <div class="flex text-sm items-center gap-4">
-                            <img src="icon_spadiot.svg" alt="SPAD iot icono">
-                            <a href="/Spad_IoT" ><strong class="text-[#1D70B6]">SPAD IoT</strong> Gestión del riesgo ambiental</a>
+                <a href="https://auth.score.net.co/realms/score/protocol/openid-connect/auth?client_id=frontend-client&scope=openid%20email%20profile&response_type=code&redirect_uri=https%3A%2F%2Fscore.net.co%2Fapi%2Fauth%2Fcallback%2Fkeycloak&state=mAaFOUMy39njQ1Cjz2zmigfR-FeTPm2EAsc1gPp2MNg&code_challenge=LF24J426Kugcj87VApslPiKhhhEd_yR8XTs8nG2rAZo&code_challenge_method=S256"
+                    id='responsive-element'
+                    class="px-5 py-2 bg-[#1D70B6] rounded-3xl  font-bold text-white text-sm hover:bg-[#263261] ">Ingresar SCORE</a>
+            </div>
+
+        </nav>
+
+        <div class="flex w-full">
+            <img class="w-full" src="background-border-nav.png" alt="border img">
+        </div>
+
+        <div id="menu-open" class="w-screen h-screen bg-black hidden bg-opacity-50">
+
+            <div class="p-10 mt-[-70px] bg-white w-full ">
+                <p class="font-bold text-[#1D70B6] pb-6 text-xm text-center">Soluciones</p>
+
+                <div class="flex justify-center">
+
+                    <div class="grid grid-cols-2 grid-rows-4 gap-9 justify-center">
+
+                        <!-- spad IoT -->
+                        <div>
+                            <h3 class="font-bold text-xs pb-3 text-sblue-general">Gestión del riesgo ambiental</h3>
+                            <div class="flex gap-6">
+                                <div class="flex text-sm items-center gap-4">
+                                    <img src="icon_spadiot.svg" alt="SPAD iot icono">
+                                    <a href="/Spad_IoT"><strong class="text-[#1D70B6]">SPAD IoT</strong> Gestión del
+                                        riesgo ambiental</a>
+                                </div>
+                                <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
+                                    <img class="h-[23px]" src="novedad.gif" alt="novedad icono">
+                                    <p class="text-white text-xs">Novedad</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
-                            <img class="h-[23px]" src="novedad.gif" alt="novedad icono">
-                            <p class="text-white text-xs" >Novedad</p>
+
+                        <!-- spad line -->
+
+                        <div>
+                            <h3 class="font-bold text-xs pb-3 text-sblue-general">Reconocimiento facial y de gestos</h3>
+                            <div class="flex gap-6 col-start-1 row-start-2 ">
+                                <a class="flex text-sm items-center gap-4" href="/Spad_Line">
+                                    <img src="icon_spaline.svg" alt="SPAD line icono">
+                                    <p><strong class="text-[#1D70B6]">SPAD Line</strong> Reconocimiento facial y de
+                                        gestos</p>
+                                </a>
+                                <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
+                                    <img class="h-[23px]" src="novedad.gif" alt="novedad icono">
+                                    <p class="text-white text-xs">Novedad</p>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- spad Farm -->
+                        <div>
+                            <h3 class="font-bold text-xs pb-3 text-sblue-general">Apoyo a procesos en el agro</h3>
+                            <div class="flex justify-between col-start-1 row-start-3">
+                                <a class="flex text-sm items-center gap-4">
+                                    <img src="icon_spadfarm.svg" alt="SPAD farm icono">
+                                    <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Farm</strong> Tecnología enfocado al Agro </p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- spad Struccture -->
+
+                        <div>
+                            <h3 class="font-bold text-xs pb-3 text-sblue-general">Gestión de procesos en la nube</h3>
+                            <div class="flex justify-between col-start-1 row-start-4">
+                                <a class="flex text-sm items-center gap-4">
+                                    <img src="icon_spadstruccture.svg" alt="SPAD Struccture icono">
+                                    <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Struccture</strong> Servicios en la nube</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- spad home -->
+
+                        <div>
+                            <h3 class="font-bold text-xs pb-3 text-sblue-general">Asistencia en el hogar</h3>
+                            <div class="flex justify-between col-start-1 row-start-5">
+                                <a class="flex text-sm items-center gap-4">
+                                    <img src="icon_spadhome.svg" alt="SPAD home icono">
+                                    <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Home</strong> Asistencia en el hogar</p>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <!-- spad Retail -->
+
+                        <div>
+                            <h3 class="font-bold text-xs pb-3 text-sblue-general">Gestión de procesos y procedimientos
+                            </h3>
+                            <div class="flex justify-between col-start-2 row-start-1">
+                                <a class="flex text-sm items-center gap-4">
+                                    <img src="icon_spadretail.svg" alt="SPAD Retail icono">
+                                    <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Retail</strong> Supervición de procesos</p>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <!-- spad Mall -->
+
+                        <div>
+                            <h3 class="font-bold text-xs pb-3 text-sblue-general">Procesos comerciales</h3>
+                            <div class="flex justify-between col-start-2 row-start-2">
+                                <a class="flex text-sm items-center gap-4">
+                                    <img src="icon_spadmall.svg" alt="SPAD Mall icono">
+                                    <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Mall</strong> Asistencia comercial</p>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <!-- spad Process -->
+
+                        <div>
+                            <h3 class="font-bold text-xs pb-3 text-sblue-general">Manejo de procesos y procedimientos
+                            </h3>
+                            <div class="flex justify-between">
+                                <a class="flex text-sm items-center gap-4">
+                                    <img class="h-8" src="icon_spadprocess.svg" alt="SPAD Mall icono">
+                                    <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Process</strong> Gestión de procedimientos</p>
+                                </a>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-            <!-- spad line -->
-            
-                <div>
-                    <h3 class="font-bold text-xs pb-3 text-sblue-general">Reconocimiento facial y de gestos</h3>
-                    <div class="flex gap-6 col-start-1 row-start-2 "> 
-                    <a class="flex text-sm items-center gap-4" href="/Spad_Line">
-                        <img src="icon_spaline.svg" alt="SPAD line icono">
-                        <p><strong class="text-[#1D70B6]">SPAD Line</strong> Reconocimiento facial y de gestos</p>
-                    </a>
-                    <div class="bg-[#1D70B6] flex items-center gap-3 p-[5px] w-[120px] justify-center rounded-lg">
-                        <img class="h-[23px]" src="novedad.gif" alt="novedad icono">
-                        <p class="text-white text-xs">Novedad</p>
-                    </div>
-                    </div>
-                </div>
-
-            <!-- spad Farm -->
-                <div>
-                    <h3 class="font-bold text-xs pb-3 text-sblue-general">Apoyo a procesos en el agro</h3>
-                    <div class="flex justify-between col-start-1 row-start-3">
-                        <a class="flex text-sm items-center gap-4">
-                            <img src="/public/icon_spadfarm.svg" alt="SPAD farm icono">
-                            <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Farm</strong> Tecnología enfocado al Agro  </p>
-                        </a>               
-                    </div>
-                </div>
-
-            <!-- spad Struccture -->
-
-                <div>
-                    <h3 class="font-bold text-xs pb-3 text-sblue-general">Gestión de procesos en la nube</h3>
-                    <div class="flex justify-between col-start-1 row-start-4">
-                        <a class="flex text-sm items-center gap-4">
-                            <img src="icon_spadstruccture.svg" alt="SPAD Struccture icono">
-                            <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Struccture</strong>  Servicios en la nube</p>
-                        </a>
-                    </div>
-                </div>
-
-            <!-- spad home -->
-
-                <div>
-                <h3 class="font-bold text-xs pb-3 text-sblue-general">Asistencia en el hogar</h3>
-                    <div class="flex justify-between col-start-1 row-start-5">
-                        <a class="flex text-sm items-center gap-4">
-                            <img src="icon_spadhome.svg" alt="SPAD home icono">
-                            <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong>SPAD Home</strong>  Asistencia en el hogar</p>
-                        </a>
-
-                    </div>
-                </div>
-
-            <!-- spad Retail -->
-
-                <div>
-                <h3 class="font-bold text-xs pb-3 text-sblue-general">Gestión de procesos y procedimientos</h3>
-                <div class="flex justify-between col-start-2 row-start-1">
-                    <a class="flex text-sm items-center gap-4">
-                        <img src="icon_spadretail.svg" alt="SPAD Retail icono">
-                        <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75" ><strong>SPAD Retail</strong>   Supervición de procesos</p>
-                    </a>
-    
-                </div>
-                </div>
-
-            <!-- spad Mall -->
-
-                <div>
-                <h3 class="font-bold text-xs pb-3 text-sblue-general">Procesos comerciales</h3>
-                <div class="flex justify-between col-start-2 row-start-2">
-                    <a class="flex text-sm items-center gap-4">
-                        <img src="icon_spadmall.svg" alt="SPAD Mall icono">
-                        <p class="bg-gradient-to-r from-[#2B2B65]  to-[#35A7DF] inline-block text-transparent bg-clip-text opacity-75"><strong >SPAD Mall</strong>   Asistencia comercial</p>
-                    </a>
-
-                </div>
-                </div>
+            </div>
 
         </div>
+
+
+
+        <div id="block-responsive-open" class="hidden">
+            <MenuDespligable></MenuDespligable>
         </div>
 
-        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const button = document.querySelector('#menu-button');
+                const menuOpen = document.querySelector('#menu-open');
+        
+                if (button && menuOpen) {
+                    button.addEventListener("click", () => {
+                        menuOpen.classList.toggle("hidden");
+                    });
+                }
+        
+                const blockbuttonres = document.querySelector('#block-responsive-button');
+                const blockmenuOpenres = document.querySelector('#block-responsive-open');
+        
+                if (blockbuttonres && blockmenuOpenres) {
+                    blockbuttonres.addEventListener("click", () => {
+                        blockmenuOpenres.classList.toggle("hidden");
+                    });
+                }
+        
+                // Mostrar u ocultar el modal-button cuando se haga scroll
+                const modalButton = document.getElementById("modal-button");
+                let lastScrollY = window.scrollY;
+        
+                window.addEventListener("scroll", () => {
+                    if (window.scrollY > 400) {
+                        if (!modalButton.classList.contains("visible")) {
+                            modalButton.classList.remove("hidden");
+                            modalButton.classList.add("visible");
+                            modalButton.style.display = 'block';
+                        }
+                    } else {
+                        if (modalButton.classList.contains("visible")) {
+                            modalButton.classList.remove("visible");
+                            modalButton.classList.add("hidden");
+        
+                            // Asegúrate de que se remueva la clase 'hidden' después de que la animación termine
+                            modalButton.addEventListener('animationend', () => {
+                                if (modalButton.classList.contains("hidden")) {
+                                    modalButton.style.display = 'none';
+                                }
+                            }, { once: true });
+                        }
+                    }
+                    lastScrollY = window.scrollY;
+                });
+            });
+        </script>
+    </header>
+</body>
 
-    </div>
-
-    </div>
 
 
 
-    <div id="block-responsive-open" class="hidden">
 
-        <MenuDespligable></MenuDespligable>
-
-    </div>
-
-    <script>
-        const button = document.querySelector('#menu-button') as Element;
-        const menuOpen = document.querySelector('#menu-open') as Element;
-
-        button.addEventListener("click", () => {
-            menuOpen.classList.toggle("hidden");
-        });
-
-    const blockbuttonres = document.querySelector('#block-responsive-button') as Element;
-    const blockmenuOpenres = document.querySelector('#block-responsive-open') as Element;
-
-    blockbuttonres.addEventListener("click", () => {
-        blockmenuOpenres.classList.toggle("hidden");
-    });
-</script>
-</header>
